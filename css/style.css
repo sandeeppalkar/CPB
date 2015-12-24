@@ -1,0 +1,270 @@
+/*=================================================================================================================================
+      1. Global Settings
+=================================================================================================================================*/
+*{margin:0; padding:0; -webkit-font-smoothing: subpixel-antialiased}
+a {text-decoration:none; outline:none}
+a img {border:none}
+.clear {clear:both; overflow:hidden; line-height:0; font-size:0; height:0}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear: both;height:0}
+* html .clearfix{zoom:1}
+*:first-child+html /**/ix{zoom:1}
+ul, li {list-style:none}
+.flt {float:left}
+.frt {float:right}
+.centeralign {margin:0 auto}
+header,hgroup,nav,footer,section,aside,article{display:block}
+:focus{outline:0; border:0}
+input[type=submit]:focus, input[type=submit]:active{outline:0}
+input {border:none; outline:none}
+.block{display:block !important}
+.none {display: none !important}
+.stopScroll{overflow:hidden}
+::-moz-selection{color:#fff;text-shadow:none;background:#915e8a}
+::selection{color:#fff;text-shadow:none;background:#915e8a}
+.posReln {position: relative}
+.bgNone {background: 0 none !important}
+.ovf {overflow: hidden;}
+
+
+.fon {font-size: 40px}
+.container.pageHolder {float: left; min-height: 500px;width: 100%;}
+
+
+.grid{float: left; min-height: 90px;}
+
+
+
+
+
+
+.twoColmarg{margin: 0 4% 0 0;}
+.threeColmarg{margin: 0 3.5% 0 0;}
+
+
+
+/*tab css*/
+.nav-tabs.nav-justified > li{background: #2daef4;border-radius:0}
+.pageTab li a{color: #000; border-radius:0 !important }
+.pageTab li a:hover{color: #fff;}
+
+.greenBrdr {border: 1px solid #01fc2a}
+.copyBtn {float: right; padding-top: 20px}
+#copyCode {height: 30px; width: 100px; background:#1dc7ea; color: #fff; font-size: 15px; font-weight: bold; display: block; line-height: 30px; text-align: center;}
+
+.thumbnail { height: 280px !important; }
+.btn-droppable { width:300px; height: 100px; padding-left: 4px; }
+.btn-draggable { width: 160px; }
+.emage { height: 215px; }
+
+
+/*==========================Inner CSS==================================================*/
+
+
+/*==========================Panel CSS==================================================*/
+.addBorder{border: 1px solid #f44a2e !important}
+
+.btn_block{text-align: center;width: 100%;padding: 20px 0;}
+.btn_block .btn {margin: 0 1%;}
+.new_rect {background: #a3a3a3;width:100% ;min-height: 62px; margin-bottom: 15px;float: left;}
+
+.twoCol { background: #a3a3a3 ;float: left;margin-bottom: 15px;min-height: 100px;width: 100%;}
+.twoColIn {border: 1px solid #000; min-height: 100px;width: 49%;}
+
+.threeCol { background: #a3a3a3 ; float: left; margin-bottom: 15px;min-height: 100px;width: 100%;}
+.threeColIn {border: 1px solid #000; float: left; min-height: 100px;width: 33%;}
+
+.colorpic li {color:#555}
+.colorpic li h2 {line-height:40px; font-size:15px; padding-left:18px; color:#595959; background:#f2f2f2 url(../images/arr.png) 96% center no-repeat; 
+	border-top: 1px solid #ccc; border-radius: 5px; cursor: pointer; }
+.colorpic li label {color:#333; font-size:15px; line-height:18px; display:block; padding-bottom:8px}
+.colorpic li .innerAttri {padding:15px 18px 0 18px}
+.colorpic li select {background:#e0e0e0; color:#595959; width:100%; height:36px; line-height:36px; border:0 none; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -o-border-radius:3px; -ms-border-radius:3px; font-size:13px;
+font-weight:bold; padding-left:18px}
+
+.searchStyle, .adsStyle, .kwdsStyle {display: none;}
+.greenOutline {border: 1px solid #19ee08}
+.search_box {display: block;}
+.innContent h3 {cursor: pointer;}
+.KwdsBg {overflow: hidden;}
+
+
+/*============================================================================
+								Component CSS
+============================================================================*/
+
+/*==========================Search CSS==================================================*/
+
+
+/*::-webkit-input-placeholder {color: #60708a;}
+:-moz-placeholder { color: #60708a;}
+::-moz-placeholder { color: #60708a;}
+:-ms-input-placeholder {color: #60708a;}
+*/
+
+	
+
+
+/*searchv1*/
+
+/*.searchHolder1{padding:10px 0;width:100%}
+.search_box{margin:0 auto; width:96%;}
+.search_box .srch-txt{height:40px; border:1px solid #d9d9d9; width:74%; padding:9px 5px; line-height:40px; float:left}
+.search_box .srch-btn{width:24%;float:right; cursor:pointer; height:40px; font-weight: normal; font-size:13px; border:none; color:#333;-webkit-appearance: none;outline:none; font-weight:bold;background: #f6d962; }
+*/
+
+/*searchv2*/
+/*.searchHolder2{padding:10px 0;width:100%}
+.search_box2{margin:0 auto; width:96%;}
+.search_box2 .srch-txt{height:40px; border:1px solid #d9d9d9; width:74%; padding:9px 5px; line-height:40px; float:left}
+.search_box2 .srch-btn{width:24%;float:right; cursor:pointer; height:40px; font-weight: normal; font-size:13px; border:none; color:#333;-webkit-appearance: none;outline:none; font-weight:bold;background: #f6d962 url(../images/search.png)   center no-repeat; }*/
+
+
+/*searchv3*/
+/*.searchHolder3{padding:10px 0; width:100%}
+.search_box3{width:96%; margin:0 auto; background:#fff; height:56px; padding:8px 0; border:1px solid #006770; border-radius:15px; -moz-border-radius:15px; -webkit-border-radius:15px; -o-border-radius:15px; -ms-border-radius:15px}
+.search_box3 .srchBtn{width:30px;float:right; margin-right:5px; cursor:pointer; height:42px; font-weight:normal; font-size:18px; border:none; -webkit-appearance: none; outline:none; background:#fff url(../images/search.png) left center no-repeat; text-transform:uppercase}
+.search_box3 .srch-txt{height:42px; width:86%; padding:9px 2% 9px 2%; line-height:24px; float:left; background:#fff; border:0 none; color:#006670; font-size:18px; border-radius:15px; -moz-border-radius:15px; -webkit-border-radius:15px; -o-border-radius:15px; -ms-border-radius:15px}*/
+
+
+/*searchv4*/
+/*.searchHolder4 { margin: 10px auto; width: 96%;}
+.searchHolder4 span{color: #ffffff; font-size: 15px;font-weight: bold; padding: 0 0 0 10px; }
+.searchHolder4 .searchBox{margin:4px auto 0; border:2px solid #60708a; background:#fff; border-radius:5px}
+.searchHolder4 .srchBtn{width:25%;float:right; cursor:pointer; height:40px; font-weight:normal; font-size:18px; background:#555; border:none; color:#fff;
+    -webkit-appearance: none; outline:none;text-transform:uppercase;border: 0;  padding: 0}
+.searchHolder4 .srchTxt {background: none;border: 0 none; float: left; height: 40px; line-height: 40px; padding: 5px 1%; width: 70%;color: #60708a; font-size: 16px; border-radius: 5px 0 0 5px}
+*/
+
+
+
+/*==========================Ad Block CSS==================================================*/
+/*ul{list-style: none} 
+.results{ display: block; overflow:hidden; margin: 0 auto; width: 90%;padding: 0 }
+.results li{ display: block; overflow: hidden; margin: 10px 0 ; position: relative; overflow: hidden; border:1px solid #363331;  background: rgba(255, 255, 255, 0.9); }
+.results .num{font-size:24px;color:#ffffff; background: #333333; float:left;margin:5px  12px 0 0;line-height:52px;width:44px;height:49px;text-align: center;border-radius: 5px;}
+
+.adTextWrap{float:left;width: 75%; padding: 0 0 0 10px} 
+a.list{ word-wrap:break-word; display: block; overflow: hidden;padding: 30px 35px 30px 28px; background: url(<tag:image_path />/9325/arrow.png) 96% center no-repeat}
+li:hover .list {background:  url(<tag:image_path />/9325/arrow2.png) 96% center no-repeat;}
+a.list .title{font-size: 25px;color: #000000;line-height: 30px;margin-bottom: 9px;font-weight: bold}
+a.list .desc{color: #000000;display: inline;font-size: 14px;line-height: 20px}
+a.list .sepr{color:#000000;font-size: 14px}
+a.list .url{color:#000000; font-size: 14px}
+.results li:hover { background: rgba(51, 51, 51, 0.9);  }
+li:hover .title {color: #ffffff;}
+li:hover .sepr, li:hover .desc, li:hover .url{color: #ffffff;}
+li:hover .num{background: #ffffff; color: #333333}*/
+
+
+
+
+
+
+
+
+
+
+/*result*/
+
+/*.results{ display: block; overflow:hidden; margin: 0 auto; width: 96%; }
+.results li{ display: block; overflow: hidden; margin: 15px 0 4px; position: relative; overflow: hidden; border:1px solid #b5b4b5 ;
+	background:#ffffff}
+
+.results .num{font-size: 45px; color: #2d2d2d; float: left; line-height: 58px; font-weight: normal; text-align: center; margin:1.5% 0 0 0}
+
+.results .adTextWrap{float:left;width: 83%; padding: 1% 0 1% 3%}
+.results a.list{ word-wrap:break-word; display: block; overflow: hidden;padding:3% 15% 3% 3%; background: url(../images/arrow.png)  97% center no-repeat}
+
+.results a.list .title{font-size: 25px;color: #2d2d2d;line-height: 34px;margin-bottom: 4px;font-weight: bold}
+.results a.list .desc{color: #7c7c7d;display: inline;font-size: 15px;line-height: 20px}
+.results a.list .sepr{color:#7c7c7d;font-size: 15px}
+.results a.list .url{color:#7c7c7d; font-size: 15px;}
+
+.results li:hover{background:#259deb;border:1px solid #19699d}
+.results li:hover .list {background:url(../images/arrowHover.png) 97% center no-repeat}
+
+.results li:hover .num{color: #ffffff}
+.results li:hover .title {color: #ffffff}
+.results li:hover .desc,.results li:hover .url{color: #ffffff;}*/
+
+
+
+/*result2*/
+
+/*.results2{ display: block; overflow:hidden; margin: 0 auto; width: 96%; }
+.results2 li{ display: block; overflow: hidden; margin: 15px 0 4px  ; position: relative; overflow: hidden; border:1px solid #b5b4b5 ; background:#ffffff}
+
+.results2 .num{font-size: 37px; color: #2d2d2d; float: left; line-height: 51px; font-weight: normal; text-align: center;width: 50px; height: 50px; margin:2.4% 0 0; background: #dc675f}
+
+.results2 .adTextWrap{float:left;width: 83%; padding: 1% 0 1% 3%}
+.results2 a.list{ word-wrap:break-word; display: block; overflow: hidden;padding:3% 15% 3% 3%; background: url(../images/arrow.png)  97% center no-repeat}
+
+.results2 a.list .title{font-size: 25px;color: #2d2d2d;line-height: 34px;margin-bottom: 4px;font-weight: bold}
+.results2 a.list .desc{color: #7c7c7d;display: inline;font-size: 15px;line-height: 20px}
+.results2 a.list .sepr{color:#7c7c7d;font-size: 15px}
+.results2 a.list .url{color:#7c7c7d; font-size: 15px;}
+
+.results2 li:hover{background:#259deb;border:1px solid #19699d}
+.results2 li:hover .list {background:url(../images/arrowHover.png) 97% center no-repeat}
+
+.results2 li:hover .num{color: #ffffff}
+.results2 li:hover .title {color: #ffffff}
+.results2 li:hover .desc,.results2 li:hover .url{color: #ffffff;}
+
+
+
+@media screen and (max-width:481px) {
+.results2 .num{ display: none;}
+}*/
+
+
+
+
+
+/*results3*/
+
+/*.results3{ display: block; overflow:hidden; margin: 0 auto; width: 96%; }
+.results3 li{ display: block; overflow: hidden; margin: 15px 0 4px; position: relative; overflow: hidden; border:1px solid #b5b4b5 ; background:#ffffff}
+
+.results3 .num{font-size: 37px; color: #2d2d2d; float: left; line-height: 51px; font-weight: normal; text-align: center;width: 50px; height: 50px; margin:2.4% 0 0; background: #dc675f;display:none;}
+
+.results3 .adTextWrap{float:left;width: 83%; padding: 1% 0 1% 3%}
+.results3 a.list{ word-wrap:break-word; display: block; overflow: hidden;padding:3% 15% 3% 3%; background: url(../images/arrow.png)  97% center no-repeat}
+
+.results3 a.list .title{font-size: 25px;color: #2d2d2d;line-height: 34px;margin-bottom: 4px;font-weight: bold}
+.results3 a.list .desc{color: #7c7c7d;display: inline;font-size: 15px;line-height: 20px}
+.results3 a.list .sepr{color:#7c7c7d;font-size: 15px}
+.results3 a.list .url{color:#7c7c7d; font-size: 15px;}
+
+.results3 li:hover{background:#259deb;border:1px solid #19699d}
+.results3 li:hover .list {background:url(../images/arrowHover.png) 97% center no-repeat}
+
+.results3 li:hover .num{color: #ffffff}
+.results3 li:hover .title {color: #ffffff}
+.results3 li:hover .desc,.results3 li:hover .url{color: #ffffff;}
+*/
+
+
+
+
+
+
+
+
+/*==========================Keyword Block CSS==================================================*/
+/*.kwdWrap {margin: 0 auto;width: 96%;}
+.kwdWrap li { color: #1dc7ea; font-size: 21px;margin: 20px  0; text-align: left; float: left;width: 100%;}
+.kwdWrap li a {color: #1a1a1a; background:url(images/arrowsmall.png) right center no-repeat;padding: 0 50px 0 10px; }
+
+.kwdWrap2 {margin: 0 auto;width: 96%;}
+.kwdWrap2 li { color: #1dc7ea; font-size: 21px;margin: 20px  0; text-align: left; float: left;width: 100%;}
+.kwdWrap2 li a {color: #1a1a1a; background:url(images/arrowsmall.png) left center no-repeat;padding: 0 0 0 40px; }
+*/
+
+/*css for accordian start*/
+.dNone {display: none;}
+.innContent {padding: 15px}
+.scroller {height: 400px; overflow: scroll;}
+.colorpic li h2 {background: #f2f2f2 url("../images/arr.png") no-repeat scroll 96% center;
+    border-radius: 5px; border-top: 1px solid #ccc; color: #595959; cursor: pointer; font-size: 15px; line-height: 40px; padding-left: 18px; margin: 0}
+/*css for accordian End*/	

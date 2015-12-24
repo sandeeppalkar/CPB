@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html ng-app="drag-and-drop">
+   <head lang="en">
+      <meta charset="utf-8" />
+      <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <title>Custom Page Builder</title>
+      <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+      <meta name="viewport" content="width=device-width" />
+      <!-- Bootstrap core CSS     -->
+      <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <!-- Animation library for notifications   -->
+      <link href="css/animate.min.css" rel="stylesheet"/>
+      <!--  Light Bootstrap Table core CSS    -->
+      <link href="css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+      <!--  Fonts and icons     -->
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+      <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
+      <link href="css/style.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="colorpicker.css">
+      <!--<link href='dragula.css' rel='stylesheet' type='text/css' />
+         <link href='example.css' rel='stylesheet' type='text/css' /> -->
+   </head>
+   </head>
+   <body>
+      <div class="wrapper" >
+         <div class="sidebar" data-color="azure">
+            <!--   
+               Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" 
+               Tip 2: you can also add an image using data-image tag
+               
+               -->
+            <div class="sidebar-wrapper">
+               <div class="logo">
+                  <a href="http://www.creative-tim.com" class="simple-text">                    
+                  Custom Page Builder
+                  </a>
+               </div>
+               <ul class="nav">
+                  <li class="active">
+                     <a href="javascript:;">
+                        <i class="pe-7s-graph"></i> 
+                        <p>Desktop Landing</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="javascript:;">
+                        <i class="pe-7s-user"></i> 
+                        <p>Mobile Landing</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="javascript:;">
+                        <i class="pe-7s-note2"></i> 
+                        <p>Tablet Landing</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="javascript:;">
+                        <i class="pe-7s-graph"></i> 
+                        <p>Desktop Results</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="javascript:;">
+                        <i class="pe-7s-user"></i> 
+                        <p>Mobile Results</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="javascript:;">
+                        <i class="pe-7s-note2"></i> 
+                        <p>Tablet Results</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="javascript:;">
+                        <i class="pe-7s-graph"></i> 
+                        <p>Desktop No-Results</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="javascript:;">
+                        <i class="pe-7s-user"></i> 
+                        <p>Mobile No-Results</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="javascript:;">
+                        <i class="pe-7s-note2"></i> 
+                        <p>Tablet No-Results</p>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="main-panel">
+            <nav class="navbar navbar-default navbar-fixed">
+               <div class="container-fluid">
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     </button>
+                     <a class="navbar-brand preview" href="#">Preview</a>
+                  </div>
+                  <div class="collapse navbar-collapse">
+                     <ul class="nav navbar-nav navbar-left">
+                        <li>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <i class="fon pe-7s-monitor"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <i class="fon pe-7s-monitor"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <i class="fon pe-7s-phone"></i>
+                           </a>
+                        </li>
+                     </ul>
+                     <div class="copyBtn"><a href="#" id="copyCode" onclick="myFunction()">Copy Code</a></div>
+                  </div>
+               </div>
+            </nav>
+            <div class="content">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-8">
+                        <div class="card">
+                           <div class="header">
+                              <h4 class="title1">Page Layout</h4>
+                           </div>
+                           <div class="content clearfix">
+                              <div id='right-copy-1tomany sortable ' class='container pageHolder grid'>
+                                 <style id="mainStyle"></style>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="card">
+                           <!--tabs start-->
+                           <div id="tabs-container">
+                              <!-- Nav tabs -->
+                              <ul class="nav nav-tabs nav-justified pageTab" role="tablist">
+                                 <li role="presentation" class="active"><a href="#Panel" aria-controls="Panel" role="tab" data-toggle="tab">Panel</a></li>
+                                 <li role="presentation"><a href="#Components" aria-controls="Components" role="tab" data-toggle="tab">Components</a></li>
+                                 <li role="presentation"><a href="#Style" aria-controls="Style" role="tab" data-toggle="tab">Style</a></li>
+                              </ul>
+                              <!-- Tab panes -->
+                              <div class="tab-content">
+                                 <div role="tabpanel" class="tab-pane active" id="Panel">
+                                    <div class="btn_block">
+                                       <!-- <button id="oneColum" > oneColum </button> -->
+                                       <button type="button" class="btn btn-default" id="oneColum">oneColum</button>
+                                       <button class="btn btn-default" id="twoColum"> twoColum </button>                                       
+                                       <button class="btn btn-default" id="threeColum"> threeColum </button>
+                                    </div>
+                                 </div>
+                                 <div role="tabpanel" class="tab-pane" id="Components">
+                                    <div class="accordian">
+                                       <ul class="colorpic">
+                                          <li class="brdrNone">
+                                             <h2>Search Block</h2>
+                                             <div class="innContent dNone">
+                                                <h3 class="search1">search1</h3>
+                                                <div class="searchHolder1 clearfix none">
+                                                   <div class="search_box">
+                                                      <search_form:1>
+                                                         <!--  <search_input:1 id="searchbox1" class="srch-txt" />   -->
+                                                         <input type="text" class="srch-txt">                     
+                                                         <input type="submit" class="srch-btn" value="SEARCH" />
+                                                      </search_form:1>
+                                                   </div>
+                                                </div>
+                                                <h3 class="search2">search2</h3>
+                                                <div class="searchHolder2 clearfix none">
+                                                   <div class="search_box2">
+                                                      <search_form:1>
+                                                         <!--  <search_input:1 id="searchbox1" class="srch-txt" />   -->
+                                                         <input type="text" class="srch-txt">                     
+                                                         <input type="submit" class="srch-btn" value="" />
+                                                      </search_form:1>
+                                                   </div>
+                                                </div>
+                                                <h3 class="search3">search3</h3>
+                                                <div class="searchHolder3 clearfix none">
+                                                   <div class="search_box3 ">
+                                                      <search_form:1>
+                                                         <!-- <search_input:1 class="srch-txt1" placeholder="Search" /> -->
+                                                         <input type="text" class="srch-txt1">
+                                                         <input type="submit" class="srchBtn" value="" />
+                                                      </search_form:1>
+                                                   </div>
+                                                </div>
+                                                <h3 class="search4">search4</h3>
+                                                <div class="searchHolder4 clearfix none">
+                                                   <span>Search For:</span>
+                                                   <div class="searchBox clearfix">
+                                                      <search_form:1>
+                                                         <input type="text" class="srchTxt" placeholder="Search"/>
+                                                         <!--<search_input:1 class="srchTxt"/>-->
+                                                         <input type="submit" class="srch-btn" value="Go"/>
+                                                      </search_form:1>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </li>
+                                          <li class="brdrNone">
+                                             <h2>Ad Block</h2>
+                                             <div class="innContent dNone">
+                                                <h3 class="ad1">Ad1</h3>
+                                                <ul class="results none">
+                                                   <if:ad_present1>
+                                                      <li>
+                                                         <a href="<ad_href_url:1 />" target="_blank" class="list clearfix">
+                                                            <div class="num"><span>1</span></div>
+                                                            <div class="adTextWrap">
+                                                               <p class="title">
+                                                                  <ad_title_text:1 />
+                                                                  Pre-Owned Cell Phones
+                                                               </p>
+                                                               <p class="desc">
+                                                                  <ad_desc:1 />
+                                                                  No Contracts & 30-Day Guarantee. Shop Certified Pre-Owned Phones
+                                                               </p>
+                                                               <span class="sepr"> | </span>
+                                                               <span class="url">
+                                                                  <ad_url_text:1 />
+                                                                  Buy.Gazelle.com/Used-Cell-Phones
+                                                               </span>
+                                                            </div>
+                                                         </a>
+                                                      </li>
+                                                   </if:ad_present1>
+                                                </ul>
+                                                <h3 class="ad2">Ad2</h3>
+                                                <ul class="results2 none" >
+                                                   <if:ad_present1>
+                                                      <li>
+                                                         <a href="<ad_href_url:1 />" target="_blank" class="list clearfix">
+                                                            <div class="num"><span>1</span></div>
+                                                            <div class="adTextWrap">
+                                                               <p class="title">
+                                                                  <ad_title_text:1 />
+                                                                  Pre-Owned Cell Phones
+                                                               </p>
+                                                               <p class="desc">
+                                                                  <ad_desc:1 />
+                                                                  No Contracts & 30-Day Guarantee. Shop Certified Pre-Owned Phones
+                                                               </p>
+                                                               <span class="sepr"> | </span>
+                                                               <span class="url">
+                                                                  <ad_url_text:1 />
+                                                                  Buy.Gazelle.com/Used-Cell-Phones
+                                                               </span>
+                                                            </div>
+                                                         </a>
+                                                      </li>
+                                                   </if:ad_present1>
+                                                </ul>
+                                                <h3 class="ad3">Ad3</h3>
+                                                <ul class="results3 none" >
+                                                   <if:ad_present1>
+                                                      <li>
+                                                         <a href="<ad_href_url:1 />" target="_blank" class="list clearfix">
+                                                            <div class="num"><span>1</span></div>
+                                                            <div class="adTextWrap">
+                                                               <p class="title">
+                                                                  <ad_title_text:1 />
+                                                                  Pre-Owned Cell Phones
+                                                               </p>
+                                                               <p class="desc">
+                                                                  <ad_desc:1 />
+                                                                  No Contracts & 30-Day Guarantee. Shop Certified Pre-Owned Phones
+                                                               </p>
+                                                               <span class="sepr"> | </span>
+                                                               <span class="url">
+                                                                  <ad_url_text:1 />
+                                                                  Buy.Gazelle.com/Used-Cell-Phones
+                                                               </span>
+                                                            </div>
+                                                         </a>
+                                                      </li>
+                                                   </if:ad_present1>
+                                                </ul>
+                                             </div>
+                                          </li>
+                                          <li class="brdrNone">
+                                             <h2>Keyword Block</h2>
+                                             <div class="innContent dNone">
+                                                <h3 class="kwd1">Keyword Block 1</h3>
+                                                <ul class="kwdWrap KwdsBg none">
+                                                   <li>
+                                                      <span>1</span> <a href="">Low Airfares</a>
+                                                      <domain_keyword:1 />
+                                                   </li>
+                                                   <li>
+                                                      <span>2</span> <a href="">Low Airfares</a>
+                                                      <domain_keyword:2 />
+                                                      </a>
+                                                   </li>
+                                                   <li>
+                                                      <span>3</span> <a href="">Low Airfares</a>
+                                                      <domain_keyword:3 />
+                                                      </a>
+                                                   </li>
+                                                   <li>
+                                                      <span>4</span> <a href="">Low Airfares</a>
+                                                      <domain_keyword:4 />
+                                                      </a>
+                                                   </li>
+                                                   <li>
+                                                      <span>5</span> <a href="">Low Airfares</a>
+                                                      <domain_keyword:5 />
+                                                      </a>
+                                                   </li>
+                                                </ul>
+                                                <h3 class="kwd2">Keyword Block 2</h3>
+                                                <ul class="kwdWrap2 KwdsBg none">
+                                                   <li>
+                                                      <a href="">Low Airfares</a>
+                                                      <domain_keyword:1 />
+                                                   </li>
+                                                   <li>
+                                                      <a href="">Low Airfares</a>
+                                                      <domain_keyword:2 />
+                                                      </a>
+                                                   </li>
+                                                   <li>
+                                                      <a href="">Low Airfares</a>
+                                                      <domain_keyword:3 />
+                                                      </a>
+                                                   </li>
+                                                   <li>
+                                                      <a href="">Low Airfares</a>
+                                                      <domain_keyword:4 />
+                                                      </a>
+                                                   </li>
+                                                   <li>
+                                                      <a href="">Low Airfares</a>
+                                                      <domain_keyword:5 />
+                                                      </a>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div role="tabpanel" class="tab-pane" id="Style">
+                                    <div class="accordian searchStyle">
+                                       <ul class="colorpic">
+                                          <li class="brdrNone">
+                                             <h2>Search Input Style</h2>
+                                             <div class="innContent dNone scroller">
+                                                <div class="innerAttri">
+                                                   <label>Background Color</label>
+                                                   <div id="colorSelector_SI_bg"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Family</label>
+                                                   <select id="fontFamily_SI">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+                                                      <option value="Georgia, 'Times New Roman', Times, serif">Georgia, "Times New Roman", Times, serif</option>
+                                                      <option value="'Courier New', Courier, monospace">"Courier New", Courier, monospace</option>
+                                                      <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+                                                      <option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
+                                                      <option value="'Trebuchet MS', Arial, Helvetica, sans-serif">"Trebuchet MS", Arial, Helvetica, sans-serif</option>
+                                                      <option value="'Arial Black', Gadget, sans-serif">"Arial Black", Gadget, sans-serif</option>
+                                                      <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Size</label>
+                                                   <select id="size_SI">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="15">15</option>
+                                                      <option value="18">18</option>
+                                                      <option value="20">20</option>
+                                                      <option value="22">22</option>
+                                                      <option value="25">25</option>
+                                                      <option value="28">28</option>
+                                                      <option value="30">30</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Text Color</label>
+                                                   <div id="colorSelector_SI"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Style</label>
+                                                   <select id="fontStyle_SI">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="italic">italic</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="oblique">oblique</option>
+                                                      <option value="inherit">inherit</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Weight</label>
+                                                   <select id="fontWeight_SI">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="bold">bold</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="bolder">bolder</option>
+                                                      <option value="lighter">lighter</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Text Align</label>
+                                                   <select id="textAlign_SI">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="center">center</option>
+                                                      <option value="justify">justify</option>
+                                                      <option value="left">left</option>
+                                                      <option value="right">right</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Letter Spacing</label>
+                                                   <select id="letterSpacing_SI">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="-5">-5</option>
+                                                      <option value="-4">-4</option>
+                                                      <option value="-3">-3</option>
+                                                      <option value="-2">-2</option>
+                                                      <option value="-1">-1</option>
+                                                      <option value="0">0</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                      <option value="5">5</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                    <label>Select Border Radius</label>
+                                                    <select id="radius_SI">
+                                                    <option value="">Not Specified</option>
+                                                    <option value="20">20</option>
+                                                    <option value="25">25</option>
+                                                    <option value="30">30</option>
+                                                    </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Border</label>
+                                                    <select id="border_SI">
+                                                    <option value="">Not Specified</option>
+                                                    <option value="medium">medium</option>
+                                                    <option value="thin">thin</option>
+                                                    <option value="thick">thick</option>
+                                                    <option value="dashed">dashed</option>
+                                                    <option value="dotted">dotted</option>
+                                                    <option value="solid">solid</option>
+                                                    <option value="none">none</option>
+                                                    <option value="groove">groove</option>
+                                                    </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Border Color</label>
+                                                <div id="colorSelector_SI_brdr"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Border Width</label>
+                                                    <select id="borderWidth_SI">
+                                                    <option value="">Not Specified</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    </select>
+                                                </div>
+                                             </div>
+                                          </li>
+                                          <li>
+                                             <h2>Search Button Style</h2>
+                                             <div class="innContent dNone scroller">
+                                                <div class="innerAttri">
+                                                   <label>Background Color</label>
+                                                   <div id="colorSelector_SB_bg"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Family</label>
+                                                   <select id="fontFamily_SB">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+                                                      <option value="Georgia, 'Times New Roman', Times, serif">Georgia, "Times New Roman", Times, serif</option>
+                                                      <option value="'Courier New', Courier, monospace">"Courier New", Courier, monospace</option>
+                                                      <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+                                                      <option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
+                                                      <option value="'Trebuchet MS', Arial, Helvetica, sans-serif">"Trebuchet MS", Arial, Helvetica, sans-serif</option>
+                                                      <option value="'Arial Black', Gadget, sans-serif">"Arial Black", Gadget, sans-serif</option>
+                                                      <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Size</label>
+                                                   <select id="size_SB">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="15">15</option>
+                                                      <option value="18">18</option>
+                                                      <option value="20">20</option>
+                                                      <option value="22">22</option>
+                                                      <option value="25">25</option>
+                                                      <option value="28">28</option>
+                                                      <option value="30">30</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Text Color</label>
+                                                   <div id="colorSelector_SB"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Style</label>
+                                                   <select id="fontStyle_SB">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="italic">italic</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="oblique">oblique</option>
+                                                      <option value="inherit">inherit</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Weight</label>
+                                                   <select id="fontWeight_SB">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="bold">bold</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="bolder">bolder</option>
+                                                      <option value="lighter">lighter</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Text Align</label>
+                                                   <select id="textAlign_SB">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="center">center</option>
+                                                      <option value="justify">justify</option>
+                                                      <option value="left">left</option>
+                                                      <option value="right">right</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Letter Spacing</label>
+                                                   <select id="letterSpacing_SB">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="-5">-5</option>
+                                                      <option value="-4">-4</option>
+                                                      <option value="-3">-3</option>
+                                                      <option value="-2">-2</option>
+                                                      <option value="-1">-1</option>
+                                                      <option value="0">0</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                      <option value="5">5</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                    <label>Select Border Radius</label>
+                                                    <select id="radius_SB">
+                                                    <option value="">Not Specified</option>
+                                                    <option value="20">20</option>
+                                                    <option value="25">25</option>
+                                                    <option value="30">30</option>
+                                                    </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Border</label>
+                                                    <select id="border_SB">
+                                                    <option value="">Not Specified</option>
+                                                    <option value="medium">medium</option>
+                                                    <option value="thin">thin</option>
+                                                    <option value="thick">thick</option>
+                                                    <option value="dashed">dashed</option>
+                                                    <option value="dotted">dotted</option>
+                                                    <option value="solid">solid</option>
+                                                    <option value="none">none</option>
+                                                    <option value="groove">groove</option>
+                                                    </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Border Color</label>
+                                                <div id="colorSelector_SB_brdr"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Border Width</label>
+                                                    <select id="borderWidth_SB">
+                                                    <option value="">Not Specified</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    </select>
+                                                </div>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
+
+                                    <div class="accordian adsStyle">
+                                       <ul class="colorpic">
+                                          <li class="brdrNone">
+                                             <h2>Ads Background Style</h2>
+                                             <div class="innContent dNone scroller">
+                                                <div class="innerAttri">
+                                                   <label>Background Color</label>
+                                                   <div id="colorSelector_ADS_bga"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Background Color Hover</label>
+                                                   <div id="colorSelector_ADS_bgah"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                    <label>Select Border Radius</label>
+                                                    <select id="radius_ADS">
+                                                    <option value="">Not Specified</option>
+                                                    <option value="20">20</option>
+                                                    <option value="25">25</option>
+                                                    <option value="30">30</option>
+                                                    </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Border</label>
+                                                    <select id="border_ADS">
+                                                    <option value="">Not Specified</option>
+                                                    <option value="medium">medium</option>
+                                                    <option value="thin">thin</option>
+                                                    <option value="thick">thick</option>
+                                                    <option value="dashed">dashed</option>
+                                                    <option value="dotted">dotted</option>
+                                                    <option value="solid">solid</option>
+                                                    <option value="none">none</option>
+                                                    <option value="groove">groove</option>
+                                                    </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Border Color</label>
+                                                <div id="colorSelector_ADS_brdr"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Border Width</label>
+                                                    <select id="borderWidth_ADS">
+                                                    <option value="">Not Specified</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    </select>
+                                                </div>
+                                             </div>
+                                          </li>
+                                          <li>
+                                             <h2>Ads title Style</h2>
+                                             <div class="innContent dNone scroller">
+                                                <div class="innerAttri">
+                                                   <label>Select Font Family</label>
+                                                   <select id="fontFamily_ADS_Title">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+                                                      <option value="Georgia, 'Times New Roman', Times, serif">Georgia, "Times New Roman", Times, serif</option>
+                                                      <option value="'Courier New', Courier, monospace">"Courier New", Courier, monospace</option>
+                                                      <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+                                                      <option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
+                                                      <option value="'Trebuchet MS', Arial, Helvetica, sans-serif">"Trebuchet MS", Arial, Helvetica, sans-serif</option>
+                                                      <option value="'Arial Black', Gadget, sans-serif">"Arial Black", Gadget, sans-serif</option>
+                                                      <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Size</label>
+                                                   <select id="size_ADS_Title">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="15">15</option>
+                                                      <option value="18">18</option>
+                                                      <option value="20">20</option>
+                                                      <option value="22">22</option>
+                                                      <option value="25">25</option>
+                                                      <option value="28">28</option>
+                                                      <option value="30">30</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Text Color</label>
+                                                   <div id="colorSelector_ADS_Title"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Style</label>
+                                                   <select id="fontStyle_ADS_Title">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="italic">italic</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="oblique">oblique</option>
+                                                      <option value="inherit">inherit</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Weight</label>
+                                                   <select id="fontWeight_ADS_Title">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="bold">bold</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="bolder">bolder</option>
+                                                      <option value="lighter">lighter</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Letter Spacing</label>
+                                                   <select id="letterSpacing_ADS_Title">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="-5">-5</option>
+                                                      <option value="-4">-4</option>
+                                                      <option value="-3">-3</option>
+                                                      <option value="-2">-2</option>
+                                                      <option value="-1">-1</option>
+                                                      <option value="0">0</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                      <option value="5">5</option>
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </li>
+                                          <li>
+                                             <h2>Ads Description Style</h2>
+                                             <div class="innContent dNone scroller">
+                                                <div class="innerAttri">
+                                                   <label>Select Font Family</label>
+                                                   <select id="fontFamily_ADS_Desc">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+                                                      <option value="Georgia, 'Times New Roman', Times, serif">Georgia, "Times New Roman", Times, serif</option>
+                                                      <option value="'Courier New', Courier, monospace">"Courier New", Courier, monospace</option>
+                                                      <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+                                                      <option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
+                                                      <option value="'Trebuchet MS', Arial, Helvetica, sans-serif">"Trebuchet MS", Arial, Helvetica, sans-serif</option>
+                                                      <option value="'Arial Black', Gadget, sans-serif">"Arial Black", Gadget, sans-serif</option>
+                                                      <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Size</label>
+                                                   <select id="size_ADS_Desc">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="15">15</option>
+                                                      <option value="18">18</option>
+                                                      <option value="20">20</option>
+                                                      <option value="22">22</option>
+                                                      <option value="25">25</option>
+                                                      <option value="28">28</option>
+                                                      <option value="30">30</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Text Color</label>
+                                                   <div id="colorSelector_ADS_Desc"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Style</label>
+                                                   <select id="fontStyle_ADS_Desc">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="italic">italic</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="oblique">oblique</option>
+                                                      <option value="inherit">inherit</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Weight</label>
+                                                   <select id="fontWeight_ADS_Desc">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="bold">bold</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="bolder">bolder</option>
+                                                      <option value="lighter">lighter</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Letter Spacing</label>
+                                                   <select id="letterSpacing_ADS_Desc">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="-5">-5</option>
+                                                      <option value="-4">-4</option>
+                                                      <option value="-3">-3</option>
+                                                      <option value="-2">-2</option>
+                                                      <option value="-1">-1</option>
+                                                      <option value="0">0</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                      <option value="5">5</option>
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </li>
+                                          <li>
+                                             <h2>Ads Url Style</h2>
+                                             <div class="innContent dNone scroller">
+                                                <div class="innerAttri">
+                                                   <label>Select Font Family</label>
+                                                   <select id="fontFamily_ADS_Url">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+                                                      <option value="Georgia, 'Times New Roman', Times, serif">Georgia, "Times New Roman", Times, serif</option>
+                                                      <option value="'Courier New', Courier, monospace">"Courier New", Courier, monospace</option>
+                                                      <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+                                                      <option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
+                                                      <option value="'Trebuchet MS', Arial, Helvetica, sans-serif">"Trebuchet MS", Arial, Helvetica, sans-serif</option>
+                                                      <option value="'Arial Black', Gadget, sans-serif">"Arial Black", Gadget, sans-serif</option>
+                                                      <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Size</label>
+                                                   <select id="size_ADS_Url">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="15">15</option>
+                                                      <option value="18">18</option>
+                                                      <option value="20">20</option>
+                                                      <option value="22">22</option>
+                                                      <option value="25">25</option>
+                                                      <option value="28">28</option>
+                                                      <option value="30">30</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Text Color</label>
+                                                   <div id="colorSelector_ADS_Url"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Style</label>
+                                                   <select id="fontStyle_ADS_Url">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="italic">italic</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="oblique">oblique</option>
+                                                      <option value="inherit">inherit</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Weight</label>
+                                                   <select id="fontWeight_ADS_Url">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="bold">bold</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="bolder">bolder</option>
+                                                      <option value="lighter">lighter</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Letter Spacing</label>
+                                                   <select id="letterSpacing_ADS_Url">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="-5">-5</option>
+                                                      <option value="-4">-4</option>
+                                                      <option value="-3">-3</option>
+                                                      <option value="-2">-2</option>
+                                                      <option value="-1">-1</option>
+                                                      <option value="0">0</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                      <option value="5">5</option>
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </li>
+                                          <li>
+                                             <h2>Ads Seperator Style</h2>
+                                             <div class="innContent dNone scroller">
+                                                <div class="innerAttri">
+                                                   <label>Select Font Size</label>
+                                                   <select id="size_ADS_Sepr">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="15">15</option>
+                                                      <option value="18">18</option>
+                                                      <option value="20">20</option>
+                                                      <option value="22">22</option>
+                                                      <option value="25">25</option>
+                                                      <option value="28">28</option>
+                                                      <option value="30">30</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Text Color</label>
+                                                   <div id="colorSelector_ADS_Sepr"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Weight</label>
+                                                   <select id="fontWeight_ADS_Sepr">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="bold">bold</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="bolder">bolder</option>
+                                                      <option value="lighter">lighter</option>
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </li>
+                                          <li>
+                                             <h2>Ads Number Style</h2>
+                                             <div class="innContent dNone scroller">
+                                                <div class="innerAttri">
+                                                   <label>Background Color</label>
+                                                   <div id="colorSelector_ADS_NumBg"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Family</label>
+                                                   <select id="fontFamily_ADS_Num">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+                                                      <option value="Georgia, 'Times New Roman', Times, serif">Georgia, "Times New Roman", Times, serif</option>
+                                                      <option value="'Courier New', Courier, monospace">"Courier New", Courier, monospace</option>
+                                                      <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+                                                      <option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
+                                                      <option value="'Trebuchet MS', Arial, Helvetica, sans-serif">"Trebuchet MS", Arial, Helvetica, sans-serif</option>
+                                                      <option value="'Arial Black', Gadget, sans-serif">"Arial Black", Gadget, sans-serif</option>
+                                                      <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Size</label>
+                                                   <select id="size_ADS_Num">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="15">15</option>
+                                                      <option value="18">18</option>
+                                                      <option value="20">20</option>
+                                                      <option value="22">22</option>
+                                                      <option value="25">25</option>
+                                                      <option value="28">28</option>
+                                                      <option value="30">30</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Text Color</label>
+                                                   <div id="colorSelector_ADS_Num"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Style</label>
+                                                   <select id="fontStyle_ADS_Num">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="italic">italic</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="oblique">oblique</option>
+                                                      <option value="inherit">inherit</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Weight</label>
+                                                   <select id="fontWeight_ADS_Num">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="bold">bold</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="bolder">bolder</option>
+                                                      <option value="lighter">lighter</option>
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
+
+                                    <div class="accordian kwdsStyle">
+                                       <ul class="colorpic">
+                                          <li class="brdrNone">
+                                             <h2>Keywords Background Style</h2>
+                                             <div class="innContent dNone scroller">
+                                                <div class="innerAttri">
+                                                   <label>Background Color</label>
+                                                   <div id="colorSelector_KWDS_bg"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                    <label>Select Border Radius</label>
+                                                    <select id="radius_KWDS">
+                                                    <option value="">Not Specified</option>
+                                                    <option value="20">20</option>
+                                                    <option value="25">25</option>
+                                                    <option value="30">30</option>
+                                                    </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Border</label>
+                                                    <select id="border_KWDS">
+                                                    <option value="">Not Specified</option>
+                                                    <option value="medium">medium</option>
+                                                    <option value="thin">thin</option>
+                                                    <option value="thick">thick</option>
+                                                    <option value="dashed">dashed</option>
+                                                    <option value="dotted">dotted</option>
+                                                    <option value="solid">solid</option>
+                                                    <option value="none">none</option>
+                                                    <option value="groove">groove</option>
+                                                    </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Border Color</label>
+                                                <div id="colorSelector_KWDS_brdr"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Border Width</label>
+                                                    <select id="borderWidth_KWDS">
+                                                    <option value="">Not Specified</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    </select>
+                                                </div>
+                                             </div>
+                                          </li>
+                                          <li>
+                                             <h2>Keywords Style</h2>
+                                             <div class="innContent dNone scroller">
+                                                <div class="innerAttri">
+                                                   <label>Select Font Family</label>
+                                                   <select id="fontFamily_KWDS">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+                                                      <option value="Georgia, 'Times New Roman', Times, serif">Georgia, "Times New Roman", Times, serif</option>
+                                                      <option value="'Courier New', Courier, monospace">"Courier New", Courier, monospace</option>
+                                                      <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+                                                      <option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
+                                                      <option value="'Trebuchet MS', Arial, Helvetica, sans-serif">"Trebuchet MS", Arial, Helvetica, sans-serif</option>
+                                                      <option value="'Arial Black', Gadget, sans-serif">"Arial Black", Gadget, sans-serif</option>
+                                                      <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Size</label>
+                                                   <select id="size_KWDS">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="15">15</option>
+                                                      <option value="18">18</option>
+                                                      <option value="20">20</option>
+                                                      <option value="22">22</option>
+                                                      <option value="25">25</option>
+                                                      <option value="28">28</option>
+                                                      <option value="30">30</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Text Color</label>
+                                                   <div id="colorSelector_KWDS"></div>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Style</label>
+                                                   <select id="fontStyle_KWDS">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="italic">italic</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="oblique">oblique</option>
+                                                      <option value="inherit">inherit</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Font Weight</label>
+                                                   <select id="fontWeight_KWDS">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="bold">bold</option>
+                                                      <option value="normal">normal</option>
+                                                      <option value="bolder">bolder</option>
+                                                      <option value="lighter">lighter</option>
+                                                   </select>
+                                                </div>
+                                                <div class="innerAttri">
+                                                   <label>Select Letter Spacing</label>
+                                                   <select id="letterSpacing_KWDS">
+                                                      <option value="">Not Specified</option>
+                                                      <option value="-5">-5</option>
+                                                      <option value="-4">-4</option>
+                                                      <option value="-3">-3</option>
+                                                      <option value="-2">-2</option>
+                                                      <option value="-1">-1</option>
+                                                      <option value="0">0</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                      <option value="5">5</option>
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- <script src='dragula.js'></script> -->
+      <!-- <script src='example.min.js'></script>-->
+      <script type="text/javascript" src="js/colorpicker.js"></script>
+      <script src='js/bootstrap.min.js'></script>
+      <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script src="js/jquery.zclip.js"></script>    
+      <script type="text/javascript" src="js/common.js"></script>
+
+
+
+   </body>
+</html>

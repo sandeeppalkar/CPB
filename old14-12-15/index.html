@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html ng-app="drag-and-drop">
+   <head lang="en">
+      <meta charset="utf-8" />
+      <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <title>Custom Page Builder</title>
+      <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+      <meta name="viewport" content="width=device-width" />
+      <!-- Bootstrap core CSS     -->
+      <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <!-- Animation library for notifications   -->
+      <link href="css/animate.min.css" rel="stylesheet"/>
+      <!--  Light Bootstrap Table core CSS    -->
+      <link href="css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+      <!--  Fonts and icons     -->
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+      <link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
+      <link href="css/style.css" rel="stylesheet" type="text/css" />
+      <!--<link href='dragula.css' rel='stylesheet' type='text/css' />
+      <link href='example.css' rel='stylesheet' type='text/css' /> -->
+      <style>
+        
+      </style>
+   </head>
+   </head>
+   <body>
+      <div class="wrapper"  ng-controller="oneCtrl">
+         <div class="sidebar" data-color="azure">
+            <!--   
+               Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" 
+               Tip 2: you can also add an image using data-image tag
+               
+               -->
+            <div class="sidebar-wrapper">
+               <div class="logo">
+                  <a href="http://www.creative-tim.com" class="simple-text">                    
+                  Custom Page Builder
+                  </a>
+               </div>
+               <ul class="nav">
+                  <li class="active">
+                     <a href="dashboard.html">
+                        <i class="pe-7s-graph"></i> 
+                        <p>Desktop Landing</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="user.html">
+                        <i class="pe-7s-user"></i> 
+                        <p>Mobile Landing</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="table.html">
+                        <i class="pe-7s-note2"></i> 
+                        <p>Tablet Landing</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="dashboard.html">
+                        <i class="pe-7s-graph"></i> 
+                        <p>Desktop Results</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="user.html">
+                        <i class="pe-7s-user"></i> 
+                        <p>Mobile Results</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="table.html">
+                        <i class="pe-7s-note2"></i> 
+                        <p>Tablet Results</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="dashboard.html">
+                        <i class="pe-7s-graph"></i> 
+                        <p>Desktop No-Results</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="user.html">
+                        <i class="pe-7s-user"></i> 
+                        <p>Mobile No-Results</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="table.html">
+                        <i class="pe-7s-note2"></i> 
+                        <p>Tablet No-Results</p>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="main-panel">
+            <nav class="navbar navbar-default navbar-fixed">
+               <div class="container-fluid">
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     </button>
+                     <a class="navbar-brand preview" href="#">Preview</a>
+                  </div>
+                  <div class="collapse navbar-collapse">
+                     <ul class="nav navbar-nav navbar-left">
+                        <li>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <i class="fon pe-7s-monitor"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <i class="fon pe-7s-monitor"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <i class="fon pe-7s-phone"></i>
+                           </a>
+                        </li>
+                     </ul>
+                     <div class="copyBtn"><a href="#" id="copyCode">Copy Code</a></div>
+                  </div>
+               </div>
+            </nav>
+            <div class="content">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-8">
+                        <div class="card">
+                           <div class="header">
+                              <h4 class="title">Page Layout</h4>
+                           </div>
+                           <div class="content clearfix">
+                              <div id='right-copy-1tomany' class='container pageHolder'></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="card">
+                           <!--tabs start-->
+                           <div id="tabs-container">
+                              <!-- Nav tabs -->
+                              <ul class="nav nav-tabs nav-justified pageTab" role="tablist">
+                                 <li role="presentation" class="active"><a href="#Panel" aria-controls="Panel" role="tab" data-toggle="tab">Panel</a></li>
+                                 <li role="presentation"><a href="#Components" aria-controls="Components" role="tab" data-toggle="tab">Components</a></li>
+                                 <li role="presentation"><a href="#Style" aria-controls="Style" role="tab" data-toggle="tab">Style</a></li>
+                              </ul>
+                              <!-- Tab panes -->
+                              <div class="tab-content">
+                                 <div role="tabpanel" class="tab-pane active" id="Panel">
+                                    <div class="btn_block">
+                                       <!-- <button id="oneColum" > oneColum </button> -->
+                                       <button type="button" class="btn btn-default" id="oneColum">oneColum</button>
+                                       <button class="btn btn-default" id="twoColum"> twoColum </button>                                       
+                                       <button class="btn btn-default" id="threeColum"> threeColum </button>
+                                    </div>
+                                 </div>
+
+                                 <div role="tabpanel" class="tab-pane" id="Components">
+                                    <div class="accordian">
+                                      <ul class="colorpic">
+                                        <li class="brdrNone">
+                                           <h2>Search Block</h2>
+                                           <div class="innContent dNone">
+                                             <h3 class="search1">search1</h3>
+                                             <div class="searchHolder1 clearfix none">
+                                                <span>Search For:</span>
+                                                <div class="searchBox clearfix">
+                                                   <search_form:1><input type="text" class="srchTxt" placeholder="Search"/>
+                                                   <!--<search_input:1 class="srchTxt"/>-->
+                                                   <input type="submit" class="srchBtn" value="Go"/>
+                                                   </search_form:1>
+                                                </div>
+                                             </div>
+
+                                             <h3 class="search2">search2</h3>
+                                             <div class="searchHolder2 clearfix none">
+                                                <div class="searchBox clearfix">
+                                                   <search_form:1><input type="text" class="srchTxt" placeholder="Search"/>
+                                                   <!--<search_input:1 class="srchTxt"/>-->
+                                                   <input type="submit" class="srchBtn" value="Go"/>
+                                                   </search_form:1>
+                                                </div>
+                                             </div>
+
+                                             <h3 class="search3">search3</h3>
+                                             <div class="searchHolder3 clearfix none">
+                                                <span>Search For:</span>
+                                                <div class="searchBox3 clearfix">
+                                                   <search_form:1><input type="text" class="srchTxt3" placeholder="Search"/>
+                                                   <!--<search_input:1 class="srchTxt"/>-->
+                                                   <input type="submit" class="srchBtn3" value="Go"/>
+                                                   </search_form:1>
+                                                </div>
+                                             </div>
+
+                                             <h3 class="search4">search4</h3>
+                                             <div class="searchHolder4 clearfix none">
+                                                <span>Search For:</span>
+                                                <div class="searchBox clearfix">
+                                                   <search_form:1><input type="text" class="srchTxt" placeholder="Search"/>
+                                                   <!--<search_input:1 class="srchTxt"/>-->
+                                                   <input type="submit" class="srchBtn" value="Go"/>
+                                                   </search_form:1>
+                                                </div>
+                                             </div>
+                                           </div>
+                                        </li>
+
+                                        <li class="brdrNone">
+                                           <h2>Ad Block</h2>
+                                           <div class="innContent dNone">
+                                             <h3 class="ad1">Ad1</h3>
+                                                <ul class="results none">
+                                                   <if:ad_present1>
+                                                   <li>
+                                                      <a href="<ad_href_url:1/>" target="_blank" class="list clearfix">
+                                                         <div class="num"><span>1</span></div>
+                                                         <div class="adTextWrap">
+                                                            <p class="title"><ad_title_text:1/>AT&T Official Site</p>
+                                                            <span class="url"><ad_url_text:1/>www.PriceMachine.com</span>
+                                                            <span class="sepr">|</span>
+                                                            <p class="desc"><ad_desc:1/>Let’s Go Shopping. Compare Prices & See Deals for Cells Phone</p>
+                                                         </div>
+                                                      </a>
+                                                   </li>
+                                                   </if:ad_present1>
+                                                </ul>
+
+                                                <h3 class="ad2">Ad2</h3>
+                                                   <ul class="results2 none">
+                                                      <if:ad_present1>
+                                                      <li>
+                                                         <a href="<ad_href_url:1/>" target="_blank" class="list clearfix">
+                                                           
+                                                            <div class="adTextWrap">
+                                                               <p class="title"><ad_title_text:2/>AT&T Official Site</p>
+                                                               <span class="url"><ad_url_text:2/>www.PriceMachine.com</span>
+                                                               <span class="sepr">|</span>
+                                                               <p class="desc"><ad_desc:2/>Let’s Go Shopping. Compare Prices & See Deals for Cells Phone</p>
+                                                            </div>
+                                                         </a>
+                                                      </li>
+                                                      </if:ad_present1>
+                                                   </ul>
+                                           </div>  
+                                        </li>
+
+                                        <li class="brdrNone">
+                                           <h2>Keyword Block</h2>
+                                           <div class="innContent dNone">
+                                             <h3 class="kwd1">Keyword Block 1</h3>
+                                             <ul class="kwdWrap none">
+                                                <li><a href="">Low Airfares</a><domain_keyword:1 /></li>
+                                                <li><a href="">Low Airfares</a><domain_keyword:2 /></a></li>
+                                                <li><a href="">Low Airfares</a><domain_keyword:3 /></a></li>
+                                                <li><a href="">Low Airfares</a><domain_keyword:4 /></a></li>
+                                                <li><a href="">Low Airfares</a><domain_keyword:5 /></a></li>
+                                             </ul>
+
+                                             <h3 class="kwd2">Keyword Block 2</h3>
+                                             <ul class="kwdWrap2 none">
+                                                <li><a href="">Low Airfares</a><domain_keyword:1 /></li>
+                                                <li><a href="">Low Airfares</a><domain_keyword:2 /></a></li>
+                                                <li><a href="">Low Airfares</a><domain_keyword:3 /></a></li>
+                                                <li><a href="">Low Airfares</a><domain_keyword:4 /></a></li>
+                                                <li><a href="">Low Airfares</a><domain_keyword:5 /></a></li>
+                                             </ul>
+                                           </div>
+                                        </li>
+                                     </ul>
+                                  </div>
+
+                                 </div>
+
+                                 <div role="tabpanel" class="tab-pane" id="Style">
+                                    <div class="accordian">
+                                         <ul class="colorpic">
+                                           <li class="brdrNone">
+                                                 <h2>Background Style</h2>
+                                                 <div class="innContent dNone">
+                                                     <div class="innerAttri">
+                                                         <label>Background Color</label>
+                                                         <div id="colorSelector2"></div>
+                                                     </div>
+                                                     <div class="innerAttri">
+                                                         <label>Select Space Above</label>
+                                                         <select id="padTop">
+                                                         <option value="">Not Specified</option>
+                                                         <option value="5">5</option>
+                                                         <option value="8">8</option>
+                                                         <option value="10">10</option>
+                                                         <option value="12">12</option>
+                                                         <option value="15">15</option>
+                                                         <option value="18">18</option>
+                                                         <option value="20">20</option>
+                                                         </select>
+                                                     </div>
+                                                     <div class="innerAttri">
+                                                         <label>Select Space Below</label>
+                                                         <select id="padBtm">
+                                                         <option value="">Not Specified</option>
+                                                         <option value="5">5</option>
+                                                         <option value="8">8</option>
+                                                         <option value="10">10</option>
+                                                         <option value="12">12</option>
+                                                         <option value="15">15</option>
+                                                         <option value="18">18</option>
+                                                         <option value="20">20</option>
+                                                         </select>
+                                                     </div>
+                                                 </div>
+                                             </li>
+                                             <li>
+                                               <h2>Text Style</h2>
+                                                 <div class="innContent dNone scroller">
+                                                     <div class="innerAttri">
+                                                       <label>Select Font Family</label>
+                                                         <select id="fontFamily">
+                                                         <option value="">Not Specified</option>
+                                                         <option value="Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+                                                         <option value="Georgia, 'Times New Roman', Times, serif">Georgia, "Times New Roman", Times, serif</option>
+                                                         <option value="'Courier New', Courier, monospace">"Courier New", Courier, monospace</option>
+                                                         <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+                                                         <option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
+                                                         <option value="'Trebuchet MS', Arial, Helvetica, sans-serif">"Trebuchet MS", Arial, Helvetica, sans-serif</option>
+                                                         <option value="'Arial Black', Gadget, sans-serif">"Arial Black", Gadget, sans-serif</option>
+                                                         <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
+                                                         </select>
+                                                     </div>
+                                                     <div class="innerAttri">
+                                                         <label>Select Font Size</label>
+                                                         <select id="size">
+                                                         <option value="">Not Specified</option>
+                                                         <option value="15">15</option>
+                                                         <option value="18">18</option>
+                                                         <option value="20">20</option>
+                                                         <option value="22">22</option>
+                                                         <option value="25">25</option>
+                                                         <option value="28">28</option>
+                                                         <option value="30">30</option>
+                                                         </select>
+                                                     </div>    
+                                                     <div class="innerAttri">
+                                                         <label>Text Color</label>
+                                                         <div id="colorSelector"></div>
+                                                     </div>
+                                                     <div class="innerAttri">
+                                                         <label>CTA Text Color</label>
+                                                         <div id="colorSelector3"></div>
+                                                     </div>
+                                                     <div class="innerAttri">
+                                                         <label>Select Font Style</label>
+                                                         <select id="fontStyle">
+                                                         <option value="">Not Specified</option>
+                                                         <option value="italic">italic</option>
+                                                         <option value="normal">normal</option>
+                                                         <option value="oblique">oblique</option>
+                                                         <option value="inherit">inherit</option>
+                                                         </select>
+                                                    </div>
+                                                    <div class="innerAttri">
+                                                       <label>Select Font Weight</label>
+                                                         <select id="fontWeight">
+                                                         <option value="">Not Specified</option>
+                                                         <option value="bold">bold</option>
+                                                         <option value="normal">normal</option>
+                                                         <option value="bolder">bolder</option>
+                                                         <option value="lighter">lighter</option>
+                                                         </select>
+                                                    </div> 
+                                                    <div class="innerAttri">
+                                                       <label>Select Text Align</label>
+                                                         <select id="textAlign">
+                                                         <option value="">Not Specified</option>
+                                                         <option value="center">center</option>
+                                                         <option value="justify">justify</option>
+                                                         <option value="left">left</option>
+                                                         <option value="right">right</option>
+                                                         </select>
+                                                    </div> 
+                                                    <div class="innerAttri">
+                                                       <label>Select Letter Spacing</label>
+                                                         <select id="letterSpacing">
+                                                         <option value="">Not Specified</option>
+                                                         <option value="-5">-5</option>
+                                                         <option value="-4">-4</option>
+                                                         <option value="-3">-3</option>
+                                                         <option value="-2">-2</option>
+                                                         <option value="-1">-1</option>
+                                                         <option value="0">0</option>
+                                                         <option value="1">1</option>
+                                                         <option value="2">2</option>
+                                                         <option value="3">3</option>
+                                                         <option value="4">4</option>
+                                                         <option value="5">5</option>
+                                                         </select>
+                                                    </div>  
+                                                    <div class="innerAttri">
+                                                       <label>Select Text decoretion</label>
+                                                         <select id="textDeco">
+                                                         <option value="">Not Specified</option>
+                                                         <option value="none">none</option>
+                                                         <option value="underline">underline</option>
+                                                         </select>
+                                                    </div> 
+                                                    <div class="innerAttri">
+                                                       <label>Select clickableArea</label>
+                                                         <select id="clickble">
+                                                         <option value="">Not Specified</option>
+                                                         <option value="block">block</option>
+                                                         <option value="inline">inline</option>
+                                                         </select>
+                                                    </div>
+                                                    <div class="innerAttri">
+                                                         <label>Select Clickable Space Above</label>
+                                                         <select id="padTopa">
+                                                         <option value="">Not Specified</option>
+                                                         <option value="5">5</option>
+                                                         <option value="8">8</option>
+                                                         <option value="10">10</option>
+                                                         <option value="12">12</option>
+                                                         <option value="15">15</option>
+                                                         <option value="18">18</option>
+                                                         <option value="20">20</option>
+                                                         </select>
+                                                     </div>
+                                                     <div class="innerAttri">
+                                                         <label>Select clickable Space Below</label>
+                                                         <select id="padBtma">
+                                                         <option value="">Not Specified</option>
+                                                         <option value="5">5</option>
+                                                         <option value="8">8</option>
+                                                         <option value="10">10</option>
+                                                         <option value="12">12</option>
+                                                         <option value="15">15</option>
+                                                         <option value="18">18</option>
+                                                         <option value="20">20</option>
+                                                         </select>
+                                                     </div>
+                                                 </div>
+                                             </li>
+                                         </ul>
+                                     </div>
+                                 </div>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- <script src='dragula.js'></script> -->
+<!-- <script src='example.min.js'></script>-->
+<script src='js/bootstrap.min.js'></script>
+<script src="js/jquery.zclip.js"></script>
+<script type="text/javascript">
+//ZeroClipboard start
+ var count=0;
+ function zclipHack(){
+ $("#copyCode").zclip({
+ path:"ZeroClipboard.swf",
+ copy:function(){return $(".pageHolder").html();}
+ });
+ }
+ $('#copyCode').click(function(){
+   count++;
+   //alert('count='+count+ '');
+ zclipHack();
+ }); 
+ zclipHack(); 
+ //ZeroClipboard end 
+
+//add coloum start
+$(function(){
+  $('#oneColum').click(function(){
+   $('.pageHolder').append('<div class="new_rect border"></div>');
+
+      $(".border").click(function() {
+         // alert($(this).index());
+         $(".border").removeClass('addBorder');
+         $(this).addClass('addBorder');
+      }); 
+  });
+
+  $('#twoColum').click(function(){
+    $('.pageHolder').append('<div class="twoCol"> <div class="twoColIn border flt" ></div> <div class="twoColIn border frt"></div></div>');
+
+      $(".border").click(function() {
+         // alert($(this).index());
+         $(".border").removeClass('addBorder');
+         $(this).addClass('addBorder');
+      }); 
+  });
+
+   $('#threeColum').click(function(){
+    $('.pageHolder').append('<div class="threeCol"> <div class="threeColIn border" ></div> <div class="threeColIn border"></div> <div class="threeColIn border"></div></div>');
+
+      $(".border").click(function() {
+         // alert($(this).index());
+         $(".border").removeClass('addBorder');
+         $(this).addClass('addBorder');
+      }); 
+  });
+   //add coloum end
+
+//add components start
+
+//add search components start
+
+   $(function(){
+      var objToClone = $('.searchHolder1');
+      for (var i = 0; i < 1; i++)
+      $(".search1").click(function(){
+         $(".addBorder .searchHolder1").addClass("newSearch")
+          $(".newSearch").removeClass("none")
+         objToClone.clone().prependTo('.addBorder');
+      });
+   });
+
+   $(function(){
+      var objToClone = $('.searchHolder2');
+      for (var i = 0; i < 1; i++)
+      $(".search2").click(function(){
+         $(".addBorder .searchHolder2").addClass("newSearch")
+          $(".newSearch").removeClass("none")
+         objToClone.clone().prependTo('.addBorder');
+      });
+   });
+
+   $(function(){
+      var objToClone = $('.searchHolder3');
+      for (var i = 0; i < 1; i++)
+      $(".search3").click(function(){
+         $(".addBorder .searchHolder3").addClass("newSearch")
+          $(".newSearch").removeClass("none")
+         objToClone.clone().prependTo('.addBorder');
+      });
+   });
+
+   $(function(){
+      var objToClone = $('.searchHolder4');
+      for (var i = 0; i < 1; i++)
+      $(".search4").click(function(){
+         $(".addBorder .searchHolder4").addClass("newSearch")
+          $(".newSearch").removeClass("none")
+         objToClone.clone().prependTo('.addBorder');
+      });
+   });
+
+//add search components end
+
+//add ads components start
+   $(function(){
+      var objToClone = $('.results');
+      for (var i = 0; i < 1; i++)
+      $(".ad1").click(function(){
+         $(".addBorder .results").addClass("newResults")
+         $(".newResults").removeClass("none")
+         objToClone.clone().prependTo('.addBorder');
+      });
+   });
+
+   $(function(){
+      var objToClone2 = $('.results2');
+      for (var i = 0; i < 1; i++)
+      $(".ad2").click(function(){
+         $(".addBorder .results2").addClass("newResults")
+         $(".newResults").removeClass("none")
+         objToClone2.clone().prependTo('.addBorder');
+      });
+   });
+//add ads components end
+
+//add kwds components start
+
+   $(function(){
+      var objToClone = $('.kwdWrap');
+      for (var i = 0; i < 1; i++)
+      $(".kwd1").click(function(){
+         $(".addBorder .kwdWrap").addClass("newKwds")
+         $(".newKwds").removeClass("none")
+         objToClone.clone().prependTo('.addBorder');
+      });
+   });
+
+   $(function(){
+      var objToClone = $('.kwdWrap2');
+      for (var i = 0; i < 1; i++)
+      $(".kwd2").click(function(){
+         $(".addBorder .kwdWrap2").addClass("newKwds")
+         $(".newKwds").removeClass("none")
+         objToClone.clone().prependTo('.addBorder');
+      });
+   });
+
+
+//add kwds components end
+
+//add components end
+
+
+//for (var i = 0; i < size; i++)
+  $(".preview").click(function(){ 
+   // var size = $(".newResults").size();
+   // for (var i = 0; i < size; i++)
+   // alert(size);
+   // $('.addBorder li').each(function(index){
+   // $("li .title").text("<ad_title_text:" + index + "/>")
+   // });
+    var index = $(".newResults").index(this);
+    alert(index);
+  $( ".title" ).text( "<ad_title_text:" + index + "/>" );
+  });
+
+
+
+
+   
+   //accordian start
+   $(".accordian li h2").click(function(){
+        //slide up all the link lists
+        $(".accordian ul .innContent").slideUp();
+        //slide down the link list below the h3 clicked - only if its closed
+        if(!$(this).next().is(":visible"))
+        {
+            $(this).next().slideDown();
+        }
+    })
+   //accordian end
+
+
+
+
+});
+
+    function addContent(divName, content) {
+         document.getElementById(divName).innerHTML = content;
+    }
+      </script>
+
+
+
+
+   </body>
+</html>
