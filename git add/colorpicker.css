@@ -501,38 +501,3 @@
 }
 
 
-
-
-
-#colorSelector_nRes_bg {
-	position: relative;
-	width: 36px;
-	height: 36px;
-	background: url(images/select.png);
-}
-#colorSelector_nRes_bg div {
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 30px;
-	height: 30px;
-	background: url(images/select.png) center;
-}
-
-#colorSelector_nRes {
-	top: 0;
-	left: 0;
-	width: 36px;
-	height: 36px;
-	background: url(images/select2.png);
-}
-#colorSelector_nRes div {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 28px;
-	height: 28px;
-	background: url(images/select2.png) center;
-}
-
-

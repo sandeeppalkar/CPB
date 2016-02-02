@@ -165,13 +165,13 @@
 
 
 
-#colorSelector_SB {
+#colorSelector {
 	position: relative;
 	width: 36px;
 	height: 36px;
 	background: url(images/select.png);
 }
-#colorSelector_SB div {
+#colorSelector div {
 	position: absolute;
 	top: 3px;
 	left: 3px;
@@ -179,14 +179,14 @@
 	height: 30px;
 	background: url(images/select.png) center;
 }
-#colorSelector_SB_bg {
+#colorSelector2 {
 	top: 0;
 	left: 0;
 	width: 36px;
 	height: 36px;
 	background: url(images/select2.png);
 }
-#colorSelector_SB_bg div {
+#colorSelector2 div {
 	position: absolute;
 	top: 4px;
 	left: 4px;
@@ -194,193 +194,6 @@
 	height: 28px;
 	background: url(images/select2.png) center;
 }
-
-
-#colorSelector_SI {
-	position: relative;
-	width: 36px;
-	height: 36px;
-	background: url(images/select.png);
-}
-#colorSelector_SI div {
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 30px;
-	height: 30px;
-	background: url(images/select.png) center;
-}
-#colorSelector_ADS_Title {
-	position: relative;
-	width: 36px;
-	height: 36px;
-	background: url(images/select.png);
-}
-#colorSelector_ADS_Title div {
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 30px;
-	height: 30px;
-	background: url(images/select.png) center;
-}
-
-#colorSelector_ADS_Desc {
-	position: relative;
-	width: 36px;
-	height: 36px;
-	background: url(images/select.png);
-}
-#colorSelector_ADS_Desc div {
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 30px;
-	height: 30px;
-	background: url(images/select.png) center;
-}
-
-#colorSelector_ADS_Url {
-	position: relative;
-	width: 36px;
-	height: 36px;
-	background: url(images/select.png);
-}
-#colorSelector_ADS_Url div {
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 30px;
-	height: 30px;
-	background: url(images/select.png) center;
-}
-
-#colorSelector_ADS_Sepr {
-	position: relative;
-	width: 36px;
-	height: 36px;
-	background: url(images/select.png);
-}
-#colorSelector_ADS_Sepr div {
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 30px;
-	height: 30px;
-	background: url(images/select.png) center;
-}
-
-#colorSelector_ADS_Num {
-	position: relative;
-	width: 36px;
-	height: 36px;
-	background: url(images/select.png);
-}
-#colorSelector_ADS_Num div {
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 30px;
-	height: 30px;
-	background: url(images/select.png) center;
-}
-
-#colorSelector_KWDS {
-	position: relative;
-	width: 36px;
-	height: 36px;
-	background: url(images/select.png);
-}
-#colorSelector_KWDS div {
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 30px;
-	height: 30px;
-	background: url(images/select.png) center;
-}
-
-#colorSelector_KWDS_bg {
-	top: 0;
-	left: 0;
-	width: 36px;
-	height: 36px;
-	background: url(images/select2.png);
-}
-#colorSelector_KWDS_bg div {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 28px;
-	height: 28px;
-	background: url(images/select2.png) center;
-}
-
-#colorSelector_ADS_NumBg {
-	top: 0;
-	left: 0;
-	width: 36px;
-	height: 36px;
-	background: url(images/select2.png);
-}
-#colorSelector_ADS_Numbg div {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 28px;
-	height: 28px;
-	background: url(images/select2.png) center;
-}
-
-
-#colorSelector_SI_bg {
-	top: 0;
-	left: 0;
-	width: 36px;
-	height: 36px;
-	background: url(images/select2.png);
-}
-#colorSelector_SI_bg div {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 28px;
-	height: 28px;
-	background: url(images/select2.png) center;
-}
-
-
-#colorSelector_ADS_bga {
-	top: 0;
-	left: 0;
-	width: 36px;
-	height: 36px;
-	background: url(images/select2.png);
-}
-#colorSelector_ADS_bga div {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 28px;
-	height: 28px;
-	background: url(images/select2.png) center;
-}
-#colorSelector_ADS_bgah {
-	top: 0;
-	left: 0;
-	width: 36px;
-	height: 36px;
-	background: url(images/select2.png);
-}
-#colorSelector_ADS_bgah div {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 28px;
-	height: 28px;
-	background: url(images/select2.png) center;
-}
-
 #colorpickerHolder2 {
 	top: 32px;
 	left: 0;
@@ -436,14 +249,14 @@
 
 
 
-#colorSelector_SB_brdr {
+#colorSelector3 {
 	top: 0;
 	left: 0;
 	width: 36px;
 	height: 36px;
 	background: url(images/select.png);
 }
-#colorSelector_SB_brdr div {
+#colorSelector3 div {
 	position: absolute;
 	top: 4px;
 	left: 4px;
@@ -451,88 +264,3 @@
 	height: 28px;
 	background: url(images/select2.png) center;
 }
-
-#colorSelector_SI_brdr {
-	top: 0;
-	left: 0;
-	width: 36px;
-	height: 36px;
-	background: url(images/select.png);
-}
-#colorSelector_SI_brdr div {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 28px;
-	height: 28px;
-	background: url(images/select2.png) center;
-}
-
-#colorSelector_ADS_brdr {
-	top: 0;
-	left: 0;
-	width: 36px;
-	height: 36px;
-	background: url(images/select.png);
-}
-#colorSelector_ADS_brdr div {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 28px;
-	height: 28px;
-	background: url(images/select2.png) center;
-}
-
-#colorSelector_KWDS_brdr {
-	top: 0;
-	left: 0;
-	width: 36px;
-	height: 36px;
-	background: url(images/select.png);
-}
-#colorSelector_KWDS_brdr div {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 28px;
-	height: 28px;
-	background: url(images/select2.png) center;
-}
-
-
-
-
-
-#colorSelector_nRes_bg {
-	position: relative;
-	width: 36px;
-	height: 36px;
-	background: url(images/select.png);
-}
-#colorSelector_nRes_bg div {
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 30px;
-	height: 30px;
-	background: url(images/select.png) center;
-}
-
-#colorSelector_nRes {
-	top: 0;
-	left: 0;
-	width: 36px;
-	height: 36px;
-	background: url(images/select2.png);
-}
-#colorSelector_nRes div {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 28px;
-	height: 28px;
-	background: url(images/select2.png) center;
-}
-
-

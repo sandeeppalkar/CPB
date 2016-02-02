@@ -91,11 +91,6 @@
       $(".searchStyle").css("display", "block");
     });
 
-     // $(".searchHolder1").hover(function(){ 
-     //  alert("hi");
-     //    $("#searchHolder1 .remove").css("display", "block");
-     // });
-
     var objToCloneSH2 = $('.searchHolder2');
     for (var i = 0; i < 1; i++)
     $(".search2").click(function(){                  
@@ -874,18 +869,112 @@
 // grid Drag & drop end
 
 
+$(document).ready(function(){
+$("#searchHolder1").click(function(){
+alert('hi');
+$(".remove").css("display", "block")
+});
+
+$(".remove").click(function(){
+$(".addBorder .searchHolder1").remove();
+});
+});
+
+
+
+
+    // function addContent(divName, content) {
+    //   document.getElementById(divName).innerHTML = content;
+    // }
+
+
+
+
+
+// $( ".searchHolder1 input" ).focus(function() {
+//   alert( "Handler for .focus() called." );
+//   $(".searchStyle").css("display", "block");   
+// });
+
+// if ($(".addBorder").is(":focus")) {
+//  $(".searchStyle").css("display", "block");
+//  } else{
+//  $(".searchStyle").css("display", "none");
+//  }
+
+
+
+
+// $(function(){
+//    $("#tabs-container li").click(function(){                  
+//        if ($(".addBorder").is(":focus")) {
+//        $(".searchStyle").css("display", "block");
+//        } else {
+//        $(".searchStyle").css("display", "none");
+//        }
+//    });
+// });
+
+
+
+// if ($(".addBorder .searchHolder1 input").click()) {
+//   alert( "Handler for .focus() called." );
+//       $(this).addClass("greenOutline");
+//    $(".searchStyle").css("display", "block");
+//    } else{
+//    $(".searchStyle").css("display", "none");
+//    }
+
 
 
 
 
 
 // $(document).ready(function(){
-// $("#searchHolder1").hover(function(){
-// alert('hi');
-// $(".remove").css("display", "block")
+// if($('.addBorder').children('.KwdsBg , .searchHolder2 ').length > 0);
+//     {
+//         $('.kwdsStyle , .searchStyle').show();
+//     }
+
+// else();
+//     {
+
+//        $('.kwdsStyle, .searchStyle').hide();
+//     }    
+
 // });
 
-// $(".remove").click(function(){
-// $(".addBorder .searchHolder1").remove();
+
+
+
+
+
+
+
+
+
+$( document ).ready(function() {
+
+$('.search_box').click(function() {
+//alert("hi");
+// $('.search_box').addClass('greenOutline');
+//   if ($('li[value*=web] img').hasClass("hide")) {
+//       $('li[value*=web] img').removeClass('hide').addClass('show');
+//   }
+//   else if ($('li[value*=web] img').hasClass("show")) {
+//       $('li[value*=web] img').removeClass('show').addClass('hide');
+//   }
+
+});
+
+// $(".search_box").click(function(){
+//    $(this).addClass("greenOutline");
+//    if ($(".search_box").is(":focus")) {
+//    $(".searchStyle").css("display", "block");
+//    } else{
+//    $(".searchStyle").css("display", "none");
+//    }
 // });
-// });
+//ads titkle
+
+});

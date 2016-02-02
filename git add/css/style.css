@@ -26,23 +26,16 @@ input {border:none; outline:none}
 .ovf {overflow: hidden;}
 
 
-
-
-
-
-/*body background change*/
-#bgImage { background: #000 ;float: left;height: 500px;width: 100%;}
-
-
-/*body background change end*/
-
-
-
 .fon {font-size: 40px}
 .container.pageHolder {float: left; min-height: 500px;width: 100%;}
 
 
 .grid{float: left; min-height: 90px;}
+
+
+
+
+
 
 .twoColmarg{margin: 0 4% 0 0;}
 .threeColmarg{margin: 0 3.5% 0 0;}
@@ -88,7 +81,7 @@ input {border:none; outline:none}
 .colorpic li select {background:#e0e0e0; color:#595959; width:100%; height:36px; line-height:36px; border:0 none; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -o-border-radius:3px; -ms-border-radius:3px; font-size:13px;
 font-weight:bold; padding-left:18px}
 
-.searchStyle, .adsStyle, .kwdsStyle, .noRmsgstyle {display: none;}
+.searchStyle, .adsStyle, .kwdsStyle {display: none;}
 .greenOutline {border: 1px solid #19ee08}
 .search_box {display: block;}
 .innContent h3 {cursor: pointer;}
@@ -275,30 +268,3 @@ li:hover .num{background: #ffffff; color: #333333}*/
 .colorpic li h2 {background: #f2f2f2 url("../images/arr.png") no-repeat scroll 96% center;
     border-radius: 5px; border-top: 1px solid #ccc; color: #595959; cursor: pointer; font-size: 15px; line-height: 40px; padding-left: 18px; margin: 0}
 /*css for accordian End*/	
-
-.bodybgStyle label { width: 46%;float: left;padding: 5px 0}
-.bodybgStyle input[type="file"], input[type="text"], select {padding: 5px;border: 1px solid #ccc;width: 50%;float: left;margin-bottom: 10px}
-.bodybgStyle input[type="file"]{border: none;padding-left: 0;margin-bottom: 5px}
-.bodybgStyle input[type="color"]{padding: 5px;border: 1px solid #ccc;width: 50%;float: left;margin-bottom: 10px;background-color: #ffffff}
-.bodybgStyle input[type="range"] {float: left;width: 37%}
-.bodybgStyle #displaymainWrapperWidth {width: 15%; color: #000; padding: 3px 0 0 5px; font-size: 12px; float: right}
-.bodybgStyle #getCodeBtn {padding: 10px 20px; background-color: #E74C3C; border: none; color: #fff; font-size: 15px; text-transform: uppercase;float: left;margin:20px 0 10px;font-weight: bold}
-.bodybgStyle .checkboxWrap{width: 100%;float: left}
-.bodybgStyle .checkboxWrap input[type="checkbox"]{width: 13px; height: 13px; padding: 0; margin: 0; vertical-align: bottom; position: relative; top: 3px}
-.bodybgStyle #libgimgwrap{display: none}
-.bodybgStyle #borderProps{display: none}
-.bodybgStyle #bodybgimgwrap{display: none}
-
-
-#remove {
-    opacity: 0.0;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
-}
-
-#searchHolder1:hover + #remove {
-    opacity: 1.0 !important;
-}

@@ -24,7 +24,7 @@
          <link href='example.css' rel='stylesheet' type='text/css' /> -->
    </head>
    </head>
-   <body >
+   <body>
       <div class="wrapper" >
          <div class="sidebar" data-color="azure">
             <!--   
@@ -39,56 +39,56 @@
                   </a>
                </div>
                <ul class="nav">
-                  <li class="active">
-                     <a href="javascript:;" class="adBlockNone">
+                  <li class="active land">
+                     <a href="javascript:;">
                         <i class="pe-7s-graph"></i> 
                         <p>Desktop Landing</p>
                      </a>
                   </li>
-                  <li>
-                     <a href="javascript:;" class="adBlockNone">
+                  <li class="land">
+                     <a href="javascript:;">
                         <i class="pe-7s-user"></i> 
                         <p>Mobile Landing</p>
                      </a>
                   </li>
-                  <li>
-                     <a href="javascript:;" class="adBlockNone">
+                  <li class="land">
+                     <a href="javascript:;">
                         <i class="pe-7s-note2"></i> 
                         <p>Tablet Landing</p>
                      </a>
                   </li>
-                  <li>
+                  <li class="res">
                      <a href="javascript:;">
                         <i class="pe-7s-graph"></i> 
                         <p>Desktop Results</p>
                      </a>
                   </li>
-                  <li>
+                  <li class="res">
                      <a href="javascript:;">
                         <i class="pe-7s-user"></i> 
                         <p>Mobile Results</p>
                      </a>
                   </li>
-                  <li>
+                  <li class="res">
                      <a href="javascript:;">
                         <i class="pe-7s-note2"></i> 
                         <p>Tablet Results</p>
                      </a>
                   </li>
-                  <li>
-                     <a href="javascript:;" class="noMsgNone">
+                  <li class="land">
+                     <a href="javascript:;">
                         <i class="pe-7s-graph"></i> 
                         <p>Desktop No-Results</p>
                      </a>
                   </li>
-                  <li>
-                     <a href="javascript:;" class="noMsgNone">
+                  <li class="land">
+                     <a href="javascript:;">
                         <i class="pe-7s-user"></i> 
                         <p>Mobile No-Results</p>
                      </a>
                   </li>
-                  <li>
-                     <a href="javascript:;" class="noMsgNone">
+                  <li class="land">
+                     <a href="javascript:;">
                         <i class="pe-7s-note2"></i> 
                         <p>Tablet No-Results</p>
                      </a>
@@ -136,13 +136,11 @@
                      <div class="col-md-8">
                         <div class="card">
                            <div class="header">
-                              <h4 class="title1">Desktop Landing</h4>
+                              <h4 class="title1">Page Layout</h4>
                            </div>
                            <div class="content clearfix">
-                              <div id='right-copy-1tomany sortable mainFrame ' class='container pageHolder grid'>
-                                       <style id="mainStyle">
-                                       ul{list-style:none}.flt{float:left}.frt{float:right}.twoColIn {min-height: 100px;width: 49%;}.threeColIn {min-height: 100px;width: 33%; float: left;}.posRel {position: relative;}.posAbs{position: absolute;}.remove {width: 35px; height: 35px; background:rgba(45, 174, 244, 0.5); top:0; cursor: pointer;}.clone {display: none; width: 35px; height: 35px; background:rgba(45, 174, 244, 0.5); top:0; cursor: pointer; left:37px;}
-                                       </style>
+                              <div id='right-copy-1tomany sortable ' class='container pageHolder grid'>
+                                 <style id="mainStyle"></style>
                               </div>
                            </div>
                         </div>
@@ -174,9 +172,7 @@
                                              <h2>Search Block</h2>
                                              <div class="innContent dNone">
                                                 <h3 class="search1">search1</h3>
-                                                <div class="searchHolder1 clearfix none posRel" id="searchHolder1">
-                                                   <div class="remove posAbs" id="remove"><img src="images/delIco.png" /></div>
-                                                   <div class="clone posAbs"><img src="images/cloneIco.png" /></div>
+                                                <div class="searchHolder1 clearfix none">
                                                    <div class="search_box">
                                                       <search_form:1>
                                                          <!--  <search_input:1 id="searchbox1" class="srch-txt" />   -->
@@ -218,7 +214,7 @@
                                                 </div>
                                              </div>
                                           </li>
-                                          <li class="brdrNone" id="addNone" >
+                                          <li class="brdrNone AdBl">
                                              <h2>Ad Block</h2>
                                              <div class="innContent dNone">
                                                 <h3 class="ad1">Ad1</h3>
@@ -356,97 +352,12 @@
                                                       </a>
                                                    </li>
                                                 </ul>
-
-                                                <h3 class="kwd3">Keyword Block 3</h3>
-                                                <ul class="kwdWrap3 KwdsBg none">
-                                                   <li>
-                                                      <span>1</span> <a href="">Low Airfares</a>
-                                                      <domain_keyword:1 />
-                                                   </li>
-                                                   <li>
-                                                      <span>2</span> <a href="">Low Airfares</a>
-                                                      <domain_keyword:2 />
-                                                      </a>
-                                                   </li>
-                                                   <li>
-                                                      <span>3</span> <a href="">Low Airfares</a>
-                                                      <domain_keyword:3 />
-                                                      </a>
-                                                   </li>
-                                                   <li>
-                                                      <span>4</span> <a href="">Low Airfares</a>
-                                                      <domain_keyword:4 />
-                                                      </a>
-                                                   </li>
-                                                   <li>
-                                                      <span>5</span> <a href="">Low Airfares</a>
-                                                      <domain_keyword:5 />
-                                                      </a>
-                                                   </li>
-                                                </ul>
-
-
-
                                              </div>
                                           </li>
-
-                                          <li class="brdrNone" id="noresultNone">
-                                             <h2>No Result Message</h2>
-                                             <div class="innContent dNone">
-                                             <h3 class="noResMsg">Add No Result Message</h3>
-                                             <p class="no-results none">We were unable to find results for your search term <span>"<tag:display_query />"</span></p>
-                                             </div>
-                                          </li>      
-
                                        </ul>
                                     </div>
                                  </div>
                                  <div role="tabpanel" class="tab-pane" id="Style">
-
-
-
-                                    <div class="accordian ">
-                                       <ul class="colorpic">
-                                       <li class="brdrNone" id="addNone">
-
-
-                                          <li class="brdrNone bodybgStyle" id="addNone" >
-                                             <h2>Body BG style</h2>
-                                             <div class="innContent dNone">
-
-
-                                          <label>Background Color </label><input type="text"  id="bodyBgColor colorSelector_SI_bg" value="#ffffff"/>
-                                       <div class="checkboxWrap">
-                                          <label>Background Image </label><input type="checkbox" id="bodyBgImageChk"/>
-                                       </div>
-                                       <div id="bodybgimgwrap">
-                                          <label style="padding-top:8px">Select Image </label><input type="file" id="bodyBgImage"/><br/>
-                                          <label>Background repeat </label>
-                                             <select id="bodyBgRepeat"/>
-                                                <option value="">select</option>
-                                                <option value="no-repeat">no-repeat</option>
-                                                <option value="repeat">repeat</option>
-                                                <option value="repeat-x">repeat-x</option>
-                                                <option value="repeat-y">repeat-y</option>
-                                             </select>
-                                             <br/>
-                                          <label>Background position x</label><input type="text" id="bodyBgPositionx"/><br/>
-                                          <label>Background position y</label><input type="text" id="bodyBgPositiony"/><br/>
-                                          <label>Background size </label><input type="text" id="bodyBgSize" /><br/>
-                                          <label>Background attachment </label><input type="text" id="bodyBgattachment"/>
-
-                                          </div>
-                                       </li>
-                                       </ul>
-                                    </div>
-
-
-
-
-
-
-
-
                                     <div class="accordian searchStyle">
                                        <ul class="colorpic">
                                           <li class="brdrNone">
@@ -712,6 +623,10 @@
                                                 <input type='file' id='searchicon' />
                                              </div>
                                           </li>
+
+
+
+
                                        </ul>
                                     </div>
 
@@ -1090,6 +1005,10 @@
                                                 <input type='file' id='addsArrow' />
                                              </div>
                                           </li>
+
+
+
+
                                        </ul>
                                     </div>
 
@@ -1227,94 +1146,8 @@
                                                 <input type='file' id='keywordArrow' />
                                              </div>
                                           </li>
-                                       </ul>
-                                    </div>
 
 
-                                    <div class="accordian noRmsgstyle">
-                                       <ul class="colorpic ">
-                                          <li class="brdrNone">
-                                             <h2>noResult Background Style</h2>
-                                             <div class="innContent dNone scroller">
-                                                <div class="innerAttri">
-                                                   <label>Background Color</label>
-                                                   <div id="colorSelector_nRes_bg"></div>
-                                                </div>
-                                             </div>
-                                          </li>
-                                          <li>
-                                             <h2>noResult Style</h2>
-                                             <div class="innContent dNone scroller">
-                                                <div class="innerAttri">
-                                                   <label>Select Font Family</label>
-                                                   <select id="fontFamily_nRes">
-                                                      <option value="">Not Specified</option>
-                                                      <option value="Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
-                                                      <option value="Georgia, 'Times New Roman', Times, serif">Georgia, "Times New Roman", Times, serif</option>
-                                                      <option value="'Courier New', Courier, monospace">"Courier New", Courier, monospace</option>
-                                                      <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
-                                                      <option value="Tahoma, Geneva, sans-serif">Tahoma, Geneva, sans-serif</option>
-                                                      <option value="'Trebuchet MS', Arial, Helvetica, sans-serif">"Trebuchet MS", Arial, Helvetica, sans-serif</option>
-                                                      <option value="'Arial Black', Gadget, sans-serif">"Arial Black", Gadget, sans-serif</option>
-                                                      <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">"Lucida Sans Unicode", "Lucida Grande", sans-serif</option>
-                                                   </select>
-                                                </div>
-                                                <div class="innerAttri">
-                                                   <label>Select Font Size</label>
-                                                   <select id="size_nRes">
-                                                      <option value="">Not Specified</option>
-                                                      <option value="15">15</option>
-                                                      <option value="18">18</option>
-                                                      <option value="20">20</option>
-                                                      <option value="22">22</option>
-                                                      <option value="25">25</option>
-                                                      <option value="28">28</option>
-                                                      <option value="30">30</option>
-                                                   </select>
-                                                </div>
-                                                <div class="innerAttri">
-                                                   <label>Text Color</label>
-                                                   <div id="colorSelector_nRes"></div>
-                                                </div>
-                                                <div class="innerAttri">
-                                                   <label>Select Font Style</label>
-                                                   <select id="fontStyle_nRes">
-                                                      <option value="">Not Specified</option>
-                                                      <option value="italic">italic</option>
-                                                      <option value="normal">normal</option>
-                                                      <option value="oblique">oblique</option>
-                                                      <option value="inherit">inherit</option>
-                                                   </select>
-                                                </div>
-                                                <div class="innerAttri">
-                                                   <label>Select Font Weight</label>
-                                                   <select id="fontWeight_nRes">
-                                                      <option value="">Not Specified</option>
-                                                      <option value="bold">bold</option>
-                                                      <option value="normal">normal</option>
-                                                      <option value="bolder">bolder</option>
-                                                      <option value="lighter">lighter</option>
-                                                   </select>
-                                                </div>
-                                                <div class="innerAttri">
-                                                   <label>Select Letter Spacing</label>
-                                                   <select id="letterSpacing_nRes">
-                                                      <option value="">Not Specified</option>
-                                                      <option value="-5">-5</option>
-                                                      <option value="-4">-4</option>
-                                                      <option value="-3">-3</option>
-                                                      <option value="-2">-2</option>
-                                                      <option value="-1">-1</option>
-                                                      <option value="0">0</option>
-                                                      <option value="1">1</option>
-                                                      <option value="2">2</option>
-                                                      <option value="3">3</option>
-                                                      <option value="4">4</option>
-                                                      <option value="5">5</option>
-                                                   </select>
-                                                </div>
-                                             </div>
-                                          </li>
                                        </ul>
                                     </div>
 
@@ -1337,7 +1170,7 @@
       <script src="js/jquery.zclip.js"></script>    
       <script type="text/javascript" src="js/common.js"></script>
 
-     
+
 
    </body>
 </html>
