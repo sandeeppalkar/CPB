@@ -89,15 +89,7 @@
       objToCloneSH1.clone().prependTo('.addBorder'); 
       $(".addBorder .searchHolder1").removeClass("none");  
       $(".searchStyle").css("display", "block");
-
     });
-
-     // $(".searchHolder1").hover(function(){ 
-     //  alert("hi");
-     //    $("#searchHolder1 .remove").css("display", "block");
-     // });
-
-
 
     var objToCloneSH2 = $('.searchHolder2');
     for (var i = 0; i < 1; i++)
@@ -125,10 +117,9 @@
 
     var search1style = '.searchHolder1{padding:10px 0;width:100%}.search_box{margin:0 auto;width:96%}.search_box .srch-txt{height:40px;border:1px solid #d9d9d9;width:74%;padding:9px 5px;line-height:40px;float:left}.search_box .srch-btn{width:24%;float:right;cursor:pointer;height:40px;font-size:13px;border:none;color:#333;-webkit-appearance:none;outline:0;font-weight:700;background:#f6d962}';
     var searchcounter1 = 1;
-     
     $(".search1").click(function(){
       if(searchcounter1==1){
-      $( "#mainStyle" ).append(search1style); 
+      $( "#mainStyle" ).append(search1style);   
       }else{}
       searchcounter1++;
     });
@@ -144,7 +135,6 @@
 
     var search3style = '.searchHolder3{padding:10px 0;width:100%}.search_box3{width:96%;margin:0 auto;background:#fff;height:56px;padding:8px 0;border:1px solid #006770;border-radius:15px;-moz-border-radius:15px;-webkit-border-radius:15px;-o-border-radius:15px;-ms-border-radius:15px}.search_box3 .srchBtn{width:30px;float:right;margin-right:5px;cursor:pointer;height:42px;font-weight:400;font-size:18px;border:none;-webkit-appearance:none;outline:0;background:url(images/search.png) left center no-repeat #fff;text-transform:uppercase}.search_box3 .srch-txt1{height:42px;width:86%;padding:9px 2%;line-height:24px;float:left;background:#fff;border:0;color:#006670;font-size:18px;border-radius:15px;-moz-border-radius:15px;-webkit-border-radius:15px;-o-border-radius:15px;-ms-border-radius:15px}';
     var searchcounter3 = 1;
-
     $(".search3").click(function(){
       if(searchcounter3==1){
       $( "#mainStyle" ).append(search3style);   
@@ -217,32 +207,26 @@
 
 //add kwds components start 
     var objToCloneKW1 = $('.kwdWrap');
-    var tagStart = '&lt;domain_keyword:'
-    var tagend = ' />'
-    var count = 1;
     for (var i = 0; i < 1; i++)
     $(".kwd1").click(function(){
-      $(".addBorder").append("<ul class='kwdWrap KwdsBg'><li><span>" + count + "</span> <a href='#' class='removable'>Low Airfares</a> "+ tagStart  + (count++) + tagend + " </li></ul>");
-      //objToCloneKW1.clone().prependTo('.addBorder');
-      //$(".addBorder .kwdWrap").removeClass("none")
+      objToCloneKW1.clone().prependTo('.addBorder');
+      $(".addBorder .kwdWrap").removeClass("none")
       $(".kwdsStyle").css("display", "block");
     });
 
     var objToCloneKW2 = $('.kwdWrap2');
     for (var i = 0; i < 1; i++)
     $(".kwd2").click(function(){
-      $(".addBorder").append("<ul class='kwdWrap2 KwdsBg'><li><a href='#' class='removable'>Low Airfares</a> <domain_keyword:" + (count++) +" /> </li></ul>");
-      // objToCloneKW2.clone().prependTo('.addBorder');
-      // $(".addBorder .kwdWrap2").removeClass("none")
+      objToCloneKW2.clone().prependTo('.addBorder');
+      $(".addBorder .kwdWrap2").removeClass("none")
       $(".kwdsStyle").css("display", "block");
     });
 
     var objToCloneKW3 = $('.kwdWrap3');
     for (var i = 0; i < 1; i++)
     $(".kwd3").click(function(){
-      $(".addBorder").append("<ul class='kwdWrap3 KwdsBg'><li><span>" + count + "</span> <a href='#' class='removable'>Low Airfares</a> <domain_keyword:" + (count++) +" /> </li></ul>");
-      // objToCloneKW3.clone().prependTo('.addBorder');
-      // $(".addBorder .kwdWrap3").removeClass("none")
+      objToCloneKW3.clone().prependTo('.addBorder');
+      $(".addBorder .kwdWrap3").removeClass("none")
       $(".kwdsStyle").css("display", "block");
     });
 
@@ -885,97 +869,61 @@
 // grid Drag & drop end
 
 
+$(document).ready(function(){
+$("#searchHolder1").click(function(){
+alert('hi');
+$(".remove").css("display", "block")
+});
 
-
-
-
-(function($) {
-  $.fn.uncomment = function(recurse) {
-    $(this).contents().each(function() {
-      if ( recurse && this.hasChildNodes() ) {
-        $(this).uncomment(recurse);
-      } else if ( this.nodeType == 8 ) {
-        // Need to "evaluate" the HTML content,
-        // otherwise simple text won't replace
-        var e = $('<span>' + this.nodeValue + '</span>');
-        $(this).replaceWith(e.contents());
-      }
-    });
-  };
-})(jQuery);
-
-
-
-
-$(".sortCode").click(function(){
-  allstyle = "";
-  classNames = "";
-  count = 1;
-  $("*").each(function() {
-    tag = $(this);
-    $.each(this.attributes, function() {
-      if(this.name == 'style'){
-        allstyle += this.value;
-        tag.removeAttr("style");
-        tag.addClass("custom-class"+count);
-        classNames +=" .custom-class"+count+"{"+allstyle+"}";
-        count++;
-      }
-    });
-  });
-
-  $("<style>").html(classNames).appendTo("style");
+$(".remove").click(function(){
+$(".addBorder .searchHolder1").remove();
+});
 });
 
 
-var inlineStyle = $('.srch-txt, .srch-btn').attr('style');
-$(".finalCode").click(function(){ 
-  $( "#mainStyle" ).append(inlineStyle);
-  $(".remove, .clone, .removable").remove();
-  $(".search_box, .kwdWrap, .results").uncomment( true );
-  $('.kwdWrap').each(function(){
-    var $this = $(this);
-    var t = $this.text();
-    $this.html(t.replace('&lt','<').replace('&gt', '>'));
-  });
-  allstyle = "";
-  classNames = "";
-  count = 1;
-  $("*").each(function() {
-    tag = $(this);
-    $.each(this.attributes, function() {
-      if(this.name == 'style'){
-        allstyle += this.value;
-        tag.removeAttr("style");
-        tag.addClass("custom-class"+count);
-        classNames +=" .custom-class"+count+"{"+allstyle+"}";
-        count++;
-      }
-    });
-  });
-
-  $("<style>").html(classNames).appendTo("style");
-});
 
 
-// function stripHTML(oldString) {
-//   return oldString.replace(/<&#91;^>&#93;*>/g, "");
-// }
+    // function addContent(divName, content) {
+    //   document.getElementById(divName).innerHTML = content;
+    // }
 
 
-// $('.kwdWrap').change(function(){
-//     $(this).val(stripHTML($(this).val());
+
+
+
+// $( ".searchHolder1 input" ).focus(function() {
+//   alert( "Handler for .focus() called." );
+//   $(".searchStyle").css("display", "block");   
+// });
+
+// if ($(".addBorder").is(":focus")) {
+//  $(".searchStyle").css("display", "block");
+//  } else{
+//  $(".searchStyle").css("display", "none");
+//  }
+
+
+
+
+// $(function(){
+//    $("#tabs-container li").click(function(){                  
+//        if ($(".addBorder").is(":focus")) {
+//        $(".searchStyle").css("display", "block");
+//        } else {
+//        $(".searchStyle").css("display", "none");
+//        }
+//    });
 // });
 
 
 
-
-// $(document).ready(function(){
-//     var count = 1;
-//     $("#ad1").click(function(){
-//        $("#inputtext").append("<input type='text' value='photo_" + count + "' name='photo_" + (count++) +"'/><br />");
-//     });
-// })
+// if ($(".addBorder .searchHolder1 input").click()) {
+//   alert( "Handler for .focus() called." );
+//       $(this).addClass("greenOutline");
+//    $(".searchStyle").css("display", "block");
+//    } else{
+//    $(".searchStyle").css("display", "none");
+//    }
 
 
 
@@ -983,14 +931,50 @@ $(".finalCode").click(function(){
 
 
 // $(document).ready(function(){
-// $("#searchHolder1").hover(function(){
-// alert('hi');
-// $(".remove").css("display", "block")
+// if($('.addBorder').children('.KwdsBg , .searchHolder2 ').length > 0);
+//     {
+//         $('.kwdsStyle , .searchStyle').show();
+//     }
+
+// else();
+//     {
+
+//        $('.kwdsStyle, .searchStyle').hide();
+//     }    
+
 // });
 
-// $(".remove").click(function(){
-// $(".addBorder .searchHolder1").remove();
-// });
-// });
 
 
+
+
+
+
+
+
+
+$( document ).ready(function() {
+
+$('.search_box').click(function() {
+//alert("hi");
+// $('.search_box').addClass('greenOutline');
+//   if ($('li[value*=web] img').hasClass("hide")) {
+//       $('li[value*=web] img').removeClass('hide').addClass('show');
+//   }
+//   else if ($('li[value*=web] img').hasClass("show")) {
+//       $('li[value*=web] img').removeClass('show').addClass('hide');
+//   }
+
+});
+
+// $(".search_box").click(function(){
+//    $(this).addClass("greenOutline");
+//    if ($(".search_box").is(":focus")) {
+//    $(".searchStyle").css("display", "block");
+//    } else{
+//    $(".searchStyle").css("display", "none");
+//    }
+// });
+//ads titkle
+
+});
